@@ -24,10 +24,8 @@ export interface TagProps {
   size?: TagSize;
   /** Type variant - filled (light) or filled-solid (solid color) */
   type?: TagType;
-  /** Optional icon element to display */
+  /** Optional icon element to display on the left */
   icon?: React.ReactNode;
-  /** Show icon on left side */
-  showIcon?: boolean;
   /** Additional CSS class */
   className?: string;
 }
@@ -38,7 +36,6 @@ const Tag: React.FC<TagProps> = ({
   size = 'default',
   type = 'filled',
   icon,
-  showIcon = false,
   className = '',
 }) => {
   const tagClasses = [
@@ -49,21 +46,11 @@ const Tag: React.FC<TagProps> = ({
     className,
   ].filter(Boolean).join(' ');
 
-  // Default icon - lightning bolt SVG (as shown in Figma)
-  const defaultIcon = (
-    <svg className="tag__icon" viewBox="0 0 16 16" fill="none">
-      <path 
-        d="M8.5 2L4 9H8L7.5 14L12 7H8L8.5 2Z" 
-        fill="currentColor"
-      />
-    </svg>
-  );
-
   return (
     <span className={tagClasses}>
-      {showIcon && (
+      {icon && (
         <span className="tag__icon-wrapper">
-          {icon || defaultIcon}
+          {icon}
         </span>
       )}
       <span className="tag__label">{label}</span>
