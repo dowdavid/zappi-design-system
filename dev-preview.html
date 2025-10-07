@@ -248,33 +248,114 @@
       border: 4px solid #d1d1d1;
     }
 
+    /* Tag styles */
     .tag {
       display: inline-flex;
       align-items: center;
+      font-family: var(--font-family-primary);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .tag--small {
+      padding: 2px 6px;
+      gap: 4px;
+      border-radius: 6px;
+      font-size: 10px;
+      line-height: 14px;
+    }
+
+    .tag--default {
       padding: 3px 8px;
-      border-radius: var(--radius-full);
-      font-size: var(--font-size-caption);
-      font-weight: var(--font-weight-semibold);
+      gap: 6px;
+      border-radius: 6px;
+      font-size: 12px;
+      line-height: 18px;
     }
 
-    .tag--primary {
-      background-color: var(--color-brand-primary-light);
-      color: var(--color-brand-primary);
+    .tag--large {
+      padding: 5px 8px;
+      gap: 6px;
+      border-radius: 8px;
+      font-size: 14px;
+      line-height: 22px;
     }
 
-    .tag--success {
-      background-color: rgba(50, 135, 50, 0.1);
-      color: #328732;
+    .tag__icon {
+      flex-shrink: 0;
+      color: currentColor;
     }
 
-    .tag--warning {
-      background-color: rgba(255, 165, 0, 0.1);
-      color: #ff8c00;
+    /* Filled variants */
+    .tag--filled.tag--grey {
+      background-color: #f5f5f5;
+      color: rgba(0, 0, 0, 0.6);
     }
 
-    .tag--error {
-      background-color: rgba(169, 47, 44, 0.1);
-      color: #a92f2c;
+    .tag--filled.tag--primary {
+      background-color: #fee7ed;
+      color: #ff4d7c;
+    }
+
+    .tag--filled.tag--secondary {
+      background-color: #e7f6ff;
+      color: #003ddb;
+    }
+
+    .tag--filled.tag--info {
+      background-color: #eefbfd;
+      color: #55c0df;
+    }
+
+    .tag--filled.tag--success {
+      background-color: #f4faf3;
+      color: #59bb59;
+    }
+
+    .tag--filled.tag--warning {
+      background-color: #fef9ee;
+      color: #f0ad4e;
+    }
+
+    .tag--filled.tag--error {
+      background-color: #fdf3f3;
+      color: #db4a46;
+    }
+
+    /* Solid variants */
+    .tag--filled-solid.tag--grey {
+      background-color: #1a1a1a;
+      color: white;
+    }
+
+    .tag--filled-solid.tag--primary {
+      background-color: #ff4d7c;
+      color: white;
+    }
+
+    .tag--filled-solid.tag--secondary {
+      background-color: #003ddb;
+      color: white;
+    }
+
+    .tag--filled-solid.tag--info {
+      background-color: #55c0df;
+      color: white;
+    }
+
+    .tag--filled-solid.tag--success {
+      background-color: #59bb59;
+      color: white;
+    }
+
+    .tag--filled-solid.tag--warning {
+      background-color: #f0ad4e;
+      color: white;
+    }
+
+    .tag--filled-solid.tag--error {
+      background-color: #db4a46;
+      color: white;
     }
 
     .toggle {
@@ -715,11 +796,93 @@
       <h2>Tags</h2>
       
       <div class="component-group">
-        <span class="component-label">Tag Variants</span>
-        <span class="tag tag--primary">Primary</span>
-        <span class="tag tag--success">Success</span>
-        <span class="tag tag--warning">Warning</span>
-        <span class="tag tag--error">Error</span>
+        <span class="component-label">Filled Tags (Default Size)</span>
+        <span class="tag tag--default tag--filled tag--grey">
+          <svg class="tag__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M8.5 2L4 9H8L7.5 14L12 7H8L8.5 2Z" fill="currentColor"/>
+          </svg>
+          <span>Grey</span>
+        </span>
+        <span class="tag tag--default tag--filled tag--primary">
+          <svg class="tag__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M8.5 2L4 9H8L7.5 14L12 7H8L8.5 2Z" fill="currentColor"/>
+          </svg>
+          <span>Primary</span>
+        </span>
+        <span class="tag tag--default tag--filled tag--success">
+          <svg class="tag__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M8.5 2L4 9H8L7.5 14L12 7H8L8.5 2Z" fill="currentColor"/>
+          </svg>
+          <span>Success</span>
+        </span>
+        <span class="tag tag--default tag--filled tag--warning">
+          <svg class="tag__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M8.5 2L4 9H8L7.5 14L12 7H8L8.5 2Z" fill="currentColor"/>
+          </svg>
+          <span>Warning</span>
+        </span>
+        <span class="tag tag--default tag--filled tag--error">
+          <svg class="tag__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M8.5 2L4 9H8L7.5 14L12 7H8L8.5 2Z" fill="currentColor"/>
+          </svg>
+          <span>Error</span>
+        </span>
+      </div>
+
+      <div class="component-group">
+        <span class="component-label">Solid Tags (Default Size)</span>
+        <span class="tag tag--default tag--filled-solid tag--grey">
+          <svg class="tag__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M8.5 2L4 9H8L7.5 14L12 7H8L8.5 2Z" fill="currentColor"/>
+          </svg>
+          <span>Grey</span>
+        </span>
+        <span class="tag tag--default tag--filled-solid tag--primary">
+          <svg class="tag__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M8.5 2L4 9H8L7.5 14L12 7H8L8.5 2Z" fill="currentColor"/>
+          </svg>
+          <span>Primary</span>
+        </span>
+        <span class="tag tag--default tag--filled-solid tag--success">
+          <svg class="tag__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M8.5 2L4 9H8L7.5 14L12 7H8L8.5 2Z" fill="currentColor"/>
+          </svg>
+          <span>Success</span>
+        </span>
+        <span class="tag tag--default tag--filled-solid tag--warning">
+          <svg class="tag__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M8.5 2L4 9H8L7.5 14L12 7H8L8.5 2Z" fill="currentColor"/>
+          </svg>
+          <span>Warning</span>
+        </span>
+        <span class="tag tag--default tag--filled-solid tag--error">
+          <svg class="tag__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M8.5 2L4 9H8L7.5 14L12 7H8L8.5 2Z" fill="currentColor"/>
+          </svg>
+          <span>Error</span>
+        </span>
+      </div>
+
+      <div class="component-group">
+        <span class="component-label">Size Variants (Primary)</span>
+        <span class="tag tag--small tag--filled tag--primary">
+          <svg class="tag__icon" width="12" height="12" viewBox="0 0 16 16" fill="none">
+            <path d="M8.5 2L4 9H8L7.5 14L12 7H8L8.5 2Z" fill="currentColor"/>
+          </svg>
+          <span>Small</span>
+        </span>
+        <span class="tag tag--default tag--filled tag--primary">
+          <svg class="tag__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M8.5 2L4 9H8L7.5 14L12 7H8L8.5 2Z" fill="currentColor"/>
+          </svg>
+          <span>Default</span>
+        </span>
+        <span class="tag tag--large tag--filled tag--primary">
+          <svg class="tag__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M8.5 2L4 9H8L7.5 14L12 7H8L8.5 2Z" fill="currentColor"/>
+          </svg>
+          <span>Large</span>
+        </span>
       </div>
     </div>
 

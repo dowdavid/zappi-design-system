@@ -1,300 +1,191 @@
-/* Tag Component Styles */
+/* Import design tokens */
+@import '../../design-tokens/tokens.css';
 
-/* Additional design tokens for Tag component */
-:root {
-  /* Tag specific colors from Figma variables */
-  --color-brand-secondary: #003ddb;
-  --color-brand-secondary-light: #e7f6ff;
-  
-  --color-semantic-info: #55c0df;
-  --color-semantic-info-light: #eefbfd;
-  
-  --color-semantic-success: #59bb59;
-  --color-semantic-success-light: #f4faf3;
-  
-  --color-semantic-warning: #f0ad4e;
-  --color-semantic-warning-light: #fef9ee;
-  
-  --color-semantic-error: #db4a46;
-  --color-semantic-error-light: #fdf3f3;
-  
-  --color-background-inverse: #1a1a1a;
-  --color-background-grey: #f5f5f5;
-  
-  --color-translucent-grey: rgba(0, 0, 0, 0.05);
-  --color-translucent-white: rgba(255, 255, 255, 0.1);
-  
-  /* Tag specific font sizes and line heights */
-  --tag-font-size-small: 10px;
-  --tag-line-height-small: 14px;
-  --tag-font-size-default: 12px;
-  --tag-line-height-default: 18px;
-  --tag-font-size-large: 14px;
-  --tag-line-height-large: 22px;
-}
-
+/* Tag base styles */
 .tag {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  border: none;
-  border-radius: var(--radius-full);
   font-family: var(--font-family-primary);
   font-weight: var(--font-weight-semibold);
-  transition: var(--transition-fast);
-  text-decoration: none;
-  cursor: default;
   white-space: nowrap;
-  position: relative;
-  box-sizing: border-box;
+  transition: all var(--transition-normal);
+  user-select: none;
 }
 
-.tag--interactive {
-  cursor: pointer;
+/* Size variants */
+.tag--small {
+  padding: 2px 6px;
+  gap: 4px;
+  border-radius: 6px;
+  font-size: 10px;
+  line-height: 14px;
 }
 
-.tag--interactive:hover {
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-sm);
+.tag--default {
+  padding: 3px 8px;
+  gap: 6px;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 18px;
 }
 
-.tag--interactive:active {
-  transform: translateY(0);
+.tag--large {
+  padding: 5px 8px;
+  gap: 6px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 22px;
 }
 
-.tag--interactive:focus {
-  outline: 2px solid var(--color-brand-primary);
-  outline-offset: 2px;
-}
-
-.tag__content {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-1-5);
-}
-
-.tag__text {
-  line-height: 0;
-}
-
-.tag__icon {
+/* Icon wrapper */
+.tag__icon-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 
-/* Size variants */
-.tag--small {
-  padding: var(--spacing-1) var(--spacing-1-5);
-  border-radius: var(--radius-full);
-  font-size: var(--tag-font-size-small);
-  line-height: var(--tag-line-height-small);
-  min-height: 18px;
-}
-
-.tag--small .tag__content {
-  gap: var(--spacing-1);
-}
-
-.tag--small .tag__icon {
+.tag--small .tag__icon-wrapper {
   width: 12px;
   height: 12px;
 }
 
-.tag--default {
-  padding: 3px var(--spacing-2);
-  border-radius: var(--radius-full);
-  font-size: var(--tag-font-size-default);
-  line-height: var(--tag-line-height-default);
-  min-height: 24px;
-}
-
-.tag--default .tag__icon {
+.tag--default .tag__icon-wrapper,
+.tag--large .tag__icon-wrapper {
   width: 16px;
   height: 16px;
 }
 
-.tag--large {
-  padding: 5px var(--spacing-2);
-  border-radius: var(--radius-full);
-  font-size: var(--tag-font-size-large);
-  line-height: var(--tag-line-height-large);
-  min-height: 32px;
+.tag__icon {
+  width: 100%;
+  height: 100%;
+  color: currentColor;
 }
 
-.tag--large .tag__icon {
-  width: 16px;
-  height: 16px;
+/* Label */
+.tag__label {
+  display: inline-block;
 }
 
-/* Grey variants */
+/* ========== FILLED TYPE - Light Backgrounds ========== */
+
+/* Grey */
 .tag--filled.tag--grey {
-  background-color: var(--color-background-grey);
-  color: var(--color-text-secondary);
+  background-color: var(--color-background-light); /* #f5f5f5 */
+  color: var(--color-text-secondary); /* rgba(0,0,0,0.6) */
 }
 
-.tag--filled-solid.tag--grey {
-  background-color: var(--color-background-inverse);
-  color: var(--color-text-inverted);
-}
-
-/* Primary variants */
+/* Primary */
 .tag--filled.tag--primary {
-  background-color: var(--color-brand-primary-light);
-  color: var(--color-brand-primary);
+  background-color: #fee7ed;
+  color: var(--color-brand-primary); /* #ff4d7c */
 }
 
-.tag--filled-solid.tag--primary {
-  background-color: var(--color-brand-primary);
-  color: var(--color-text-inverted);
-}
-
-/* Secondary variants */
+/* Secondary */
 .tag--filled.tag--secondary {
-  background-color: var(--color-brand-secondary-light);
-  color: var(--color-brand-secondary);
+  background-color: #e7f6ff;
+  color: #003ddb;
 }
 
-.tag--filled-solid.tag--secondary {
-  background-color: var(--color-brand-secondary);
-  color: var(--color-text-inverted);
-}
-
-/* Info variants */
+/* Info */
 .tag--filled.tag--info {
-  background-color: var(--color-semantic-info-light);
-  color: var(--color-semantic-info);
+  background-color: #eefbfd;
+  color: #55c0df;
 }
 
-.tag--filled-solid.tag--info {
-  background-color: var(--color-semantic-info);
-  color: var(--color-text-inverted);
-}
-
-/* Success variants */
+/* Success */
 .tag--filled.tag--success {
-  background-color: var(--color-semantic-success-light);
-  color: var(--color-semantic-success);
+  background-color: #f4faf3;
+  color: #59bb59;
 }
 
-.tag--filled-solid.tag--success {
-  background-color: var(--color-semantic-success);
-  color: var(--color-text-inverted);
-}
-
-/* Warning variants */
+/* Warning */
 .tag--filled.tag--warning {
-  background-color: var(--color-semantic-warning-light);
-  color: var(--color-semantic-warning);
+  background-color: #fef9ee;
+  color: #f0ad4e;
 }
 
-.tag--filled-solid.tag--warning {
-  background-color: var(--color-semantic-warning);
-  color: var(--color-text-inverted);
-}
-
-/* Error variants */
+/* Error */
 .tag--filled.tag--error {
-  background-color: var(--color-semantic-error-light);
-  color: var(--color-semantic-error);
+  background-color: #fdf3f3;
+  color: #db4a46;
 }
 
-.tag--filled-solid.tag--error {
-  background-color: var(--color-semantic-error);
-  color: var(--color-text-inverted);
-}
-
-/* Translucent variants */
+/* Translucent Grey */
 .tag--filled.tag--translucent-grey {
-  background-color: var(--color-translucent-grey);
+  background-color: rgba(0, 0, 0, 0.05);
+  color: var(--color-text-primary); /* rgba(0,0,0,0.8) */
+}
+
+/* Translucent White */
+.tag--filled.tag--translucent-white {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-text-inverted); /* #ffffff */
+}
+
+/* ========== FILLED-SOLID TYPE - Solid Backgrounds ========== */
+
+/* Grey Solid */
+.tag--filled-solid.tag--grey {
+  background-color: #1a1a1a;
+  color: var(--color-text-inverted); /* #ffffff */
+}
+
+/* Primary Solid */
+.tag--filled-solid.tag--primary {
+  background-color: var(--color-brand-primary); /* #ff4d7c */
+  color: var(--color-text-inverted); /* #ffffff */
+}
+
+/* Secondary Solid */
+.tag--filled-solid.tag--secondary {
+  background-color: #003ddb;
+  color: var(--color-text-inverted); /* #ffffff */
+}
+
+/* Info Solid */
+.tag--filled-solid.tag--info {
+  background-color: #55c0df;
+  color: var(--color-text-inverted); /* #ffffff */
+}
+
+/* Success Solid */
+.tag--filled-solid.tag--success {
+  background-color: #59bb59;
+  color: var(--color-text-inverted); /* #ffffff */
+}
+
+/* Warning Solid */
+.tag--filled-solid.tag--warning {
+  background-color: #f0ad4e;
+  color: var(--color-text-inverted); /* #ffffff */
+}
+
+/* Error Solid */
+.tag--filled-solid.tag--error {
+  background-color: #db4a46;
+  color: var(--color-text-inverted); /* #ffffff */
+}
+
+/* Translucent types don't have solid variants in Figma */
+.tag--filled-solid.tag--translucent-grey,
+.tag--filled-solid.tag--translucent-white {
+  /* Fallback to filled style */
+  background-color: rgba(0, 0, 0, 0.05);
   color: var(--color-text-primary);
 }
 
-.tag--filled.tag--translucent-white {
-  background-color: var(--color-translucent-white);
-  color: var(--color-text-inverted);
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .tag {
+    transition: none;
+  }
 }
 
-/* Icon styling for different color themes */
-.tag__icon svg,
-.tag__icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-/* Ensure proper contrast for icons in different variants */
-.tag--filled-solid .tag__icon {
-  filter: brightness(0) invert(1); /* Make icons white in solid variants */
-}
-
-.tag--filled .tag__icon {
-  /* Icons inherit the text color in filled variants */
-}
-
-/* Interactive states for different color variants */
-.tag--interactive.tag--filled.tag--grey:hover {
-  background-color: var(--color-hover-light);
-}
-
-.tag--interactive.tag--filled-solid.tag--grey:hover {
-  background-color: rgba(26, 26, 26, 0.8);
-}
-
-.tag--interactive.tag--filled.tag--primary:hover {
-  background-color: rgba(255, 77, 124, 0.2);
-}
-
-.tag--interactive.tag--filled-solid.tag--primary:hover {
-  background-color: rgba(255, 77, 124, 0.8);
-}
-
-/* Add hover states for all other color variants... */
-.tag--interactive.tag--filled.tag--secondary:hover {
-  background-color: rgba(0, 61, 219, 0.2);
-}
-
-.tag--interactive.tag--filled-solid.tag--secondary:hover {
-  background-color: rgba(0, 61, 219, 0.8);
-}
-
-.tag--interactive.tag--filled.tag--info:hover {
-  background-color: rgba(85, 192, 223, 0.2);
-}
-
-.tag--interactive.tag--filled-solid.tag--info:hover {
-  background-color: rgba(85, 192, 223, 0.8);
-}
-
-.tag--interactive.tag--filled.tag--success:hover {
-  background-color: rgba(89, 187, 89, 0.2);
-}
-
-.tag--interactive.tag--filled-solid.tag--success:hover {
-  background-color: rgba(89, 187, 89, 0.8);
-}
-
-.tag--interactive.tag--filled.tag--warning:hover {
-  background-color: rgba(240, 173, 78, 0.2);
-}
-
-.tag--interactive.tag--filled-solid.tag--warning:hover {
-  background-color: rgba(240, 173, 78, 0.8);
-}
-
-.tag--interactive.tag--filled.tag--error:hover {
-  background-color: rgba(219, 74, 70, 0.2);
-}
-
-.tag--interactive.tag--filled-solid.tag--error:hover {
-  background-color: rgba(219, 74, 70, 0.8);
-}
-
-.tag--interactive.tag--filled.tag--translucent-grey:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.tag--interactive.tag--filled.tag--translucent-white:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .tag {
+    outline: 1px solid currentColor;
+    outline-offset: -1px;
+  }
 }

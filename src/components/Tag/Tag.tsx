@@ -1,73 +1,73 @@
 import React from 'react';
 import './Tag.css';
 
+export type TagColor = 
+  | 'grey' 
+  | 'primary' 
+  | 'secondary' 
+  | 'info' 
+  | 'success' 
+  | 'warning' 
+  | 'error'
+  | 'translucent-grey'
+  | 'translucent-white';
+
+export type TagSize = 'small' | 'default' | 'large';
+export type TagType = 'filled' | 'filled-solid';
+
 export interface TagProps {
-  /** The text content of the tag */
-  children: React.ReactNode;
-  /** Tag size variant */
-  size?: 'small' | 'default' | 'large';
-  /** Tag style variant */
-  variant?: 'filled' | 'filled-solid';
-  /** Tag color variant */
-  color?: 'grey' | 'primary' | 'secondary' | 'info' | 'success' | 'warning' | 'error' | 'translucent-grey' | 'translucent-white';
-  /** Icon to display on the left */
-  leftIcon?: React.ReactNode;
-  /** Icon to display on the right */
-  rightIcon?: React.ReactNode;
-  /** Additional CSS class name */
+  /** Label text */
+  label: string;
+  /** Color variant */
+  color?: TagColor;
+  /** Size variant */
+  size?: TagSize;
+  /** Type variant - filled (light) or filled-solid (solid color) */
+  type?: TagType;
+  /** Optional icon element to display */
+  icon?: React.ReactNode;
+  /** Show icon on left side */
+  showIcon?: boolean;
+  /** Additional CSS class */
   className?: string;
-  /** Click handler for interactive tags */
-  onClick?: () => void;
 }
 
 const Tag: React.FC<TagProps> = ({
-  children,
-  size = 'default',
-  variant = 'filled',
+  label,
   color = 'grey',
-  leftIcon,
-  rightIcon,
+  size = 'default',
+  type = 'filled',
+  icon,
+  showIcon = false,
   className = '',
-  onClick,
 }) => {
   const tagClasses = [
     'tag',
     `tag--${size}`,
-    `tag--${variant}`,
+    `tag--${type}`,
     `tag--${color}`,
-    onClick && 'tag--interactive',
     className,
   ].filter(Boolean).join(' ');
 
-  const handleClick = () => {
-    if (onClick) {
-      onClick();
-    }
-  };
-
-  const handleKeyDown = (event: React.KeyboardEvent) => {
-    if (onClick && (event.key === 'Enter' || event.key === ' ')) {
-      event.preventDefault();
-      onClick();
-    }
-  };
-
-  const TagElement = onClick ? 'button' : 'div';
+  // Default icon - lightning bolt SVG (as shown in Figma)
+  const defaultIcon = (
+    <svg className="tag__icon" viewBox="0 0 16 16" fill="none">
+      <path 
+        d="M8.5 2L4 9H8L7.5 14L12 7H8L8.5 2Z" 
+        fill="currentColor"
+      />
+    </svg>
+  );
 
   return (
-    <TagElement
-      className={tagClasses}
-      onClick={onClick ? handleClick : undefined}
-      onKeyDown={onClick ? handleKeyDown : undefined}
-      tabIndex={onClick ? 0 : undefined}
-      type={onClick ? 'button' : undefined}
-    >
-      <div className="tag__content">
-        {leftIcon && <span className="tag__icon tag__icon--left">{leftIcon}</span>}
-        <span className="tag__text">{children}</span>
-        {rightIcon && <span className="tag__icon tag__icon--right">{rightIcon}</span>}
-      </div>
-    </TagElement>
+    <span className={tagClasses}>
+      {showIcon && (
+        <span className="tag__icon-wrapper">
+          {icon || defaultIcon}
+        </span>
+      )}
+      <span className="tag__label">{label}</span>
+    </span>
   );
 };
 
