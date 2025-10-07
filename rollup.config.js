@@ -5,6 +5,7 @@ import postcss from 'rollup-plugin-postcss';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import terser from '@rollup/plugin-terser';
 import json from '@rollup/plugin-json';
+import postcssImport from 'postcss-import';
 
 export default {
   input: 'src/lib.ts',
@@ -38,6 +39,9 @@ export default {
       minimize: true,
       modules: false,
       use: ['sass'],
+      plugins: [
+        postcssImport(),
+      ],
     }),
     json(),
     terser(),
