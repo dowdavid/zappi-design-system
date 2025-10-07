@@ -35,11 +35,12 @@
   color: var(--color-text-primary);
 }
 
-/* Tags for multi-select */
+/* Tags for multi-select - displayed above the input */
 .select__tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  order: -1; /* Ensure tags appear before the field */
 }
 
 .select__tag {
@@ -129,6 +130,16 @@
 .select--label .select__field:not(.select__field--has-value) .select__value,
 .select--label-high-emphasis .select__field:not(.select__field--has-value) .select__value {
   color: var(--color-text-tertiary);
+}
+
+/* Multi-select field with tags above - always show placeholder in field */
+.select--multi-select .select__field--with-tags .select__value {
+  color: var(--color-text-tertiary);
+}
+
+/* Multi-select field height adjustment */
+.select--multi-select .select__field {
+  height: 34px;
 }
 
 /* Icon */

@@ -170,14 +170,14 @@ const Select: React.FC<SelectProps> = ({
 
       <button
         type="button"
-        className="select__field"
+        className={`select__field ${type === 'multi-select' && selectedValues.length > 0 ? 'select__field--with-tags' : ''}`}
         onClick={handleToggle}
         disabled={disabled}
         aria-haspopup="listbox"
         aria-expanded={isOpen}
       >
         <span className="select__value">
-          {getSelectedLabel()}
+          {type === 'multi-select' && selectedValues.length > 0 ? placeholder : getSelectedLabel()}
         </span>
         <svg
           className="select__icon"
