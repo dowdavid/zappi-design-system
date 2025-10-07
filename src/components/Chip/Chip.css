@@ -1,21 +1,21 @@
 /* Import design tokens */
 @import '../../design-tokens/tokens.css';
 
-/* Base chip styles */
+/* Chip base styles */
 .chip {
   display: inline-flex;
+  align-items: center;
   background-color: var(--color-background-white);
-  border: none;
-  border-radius: var(--radius-full);
+  border: 1px solid var(--color-outline-light);
+  border-radius: var(--radius-sm);
   font-family: var(--font-family-primary);
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
   cursor: pointer;
   transition: all var(--transition-normal);
-  user-select: none;
-  box-sizing: border-box;
+  position: relative;
 }
 
-.chip:focus {
+.chip:focus-visible {
   outline: 2px solid var(--color-brand-primary);
   outline-offset: 2px;
 }
@@ -31,31 +31,27 @@
   gap: var(--spacing-3);
 }
 
-/* Content container */
-.chip__content {
+/* Contents wrapper */
+.chip__contents {
   display: flex;
   align-items: center;
   gap: var(--spacing-2);
 }
 
-/* Label styles */
+/* Label */
 .chip__label {
-  white-space: nowrap;
-  line-height: 1;
+  font-size: var(--font-size-label);
+  line-height: var(--line-height-label);
   color: var(--color-text-primary);
-}
-
-.chip--default .chip__label {
-  font-size: 14px;
-  line-height: 22px;
+  white-space: nowrap;
 }
 
 .chip--small .chip__label {
-  font-size: 12px;
-  line-height: 18px;
+  font-size: var(--font-size-caption);
+  line-height: var(--line-height-caption);
 }
 
-/* Checkbox styles */
+/* Checkbox */
 .chip__checkbox {
   display: flex;
   align-items: center;
@@ -71,52 +67,57 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color var(--transition-normal);
 }
 
-.chip__checkbox-icon {
-  width: 12px;
-  height: 12px;
+.chip__checkbox-bg--checked {
+  background-color: var(--color-brand-primary);
+}
+
+.chip__checkbox-check {
   color: var(--color-text-inverted);
 }
 
-/* State variants */
-
-/* Default state */
+/* State: Default */
 .chip--default {
-  background-color: var(--color-background-light);
+  border-color: var(--color-outline-light);
 }
 
 .chip--default .chip__label {
   color: var(--color-text-primary);
 }
 
-/* Hover state */
-.chip--hover {
-  background-color: var(--color-hover-dark);
+/* State: Hover */
+.chip--hover:not(.chip--disabled):not(.chip--disabled-selected) {
+  border-color: var(--color-brand-primary-dark);
 }
 
-.chip--hover .chip__label {
+.chip--hover:not(.chip--disabled):not(.chip--disabled-selected) .chip__label {
   color: var(--color-brand-primary-dark);
 }
 
-/* Selected state */
-.chip--selected {
-  background-color: var(--color-brand-primary-light);
+/* State: Selected */
+.chip--selected:not(.chip--disabled-selected) {
+  border-color: var(--color-brand-primary);
 }
 
-.chip--selected .chip__label {
+.chip--selected:not(.chip--disabled-selected) .chip__label {
   color: var(--color-brand-primary);
 }
 
-.chip--selected .chip__checkbox-bg {
-  background-color: var(--color-brand-primary);
+/* State: Selected + Hover */
+.chip--selected.chip--hover:not(.chip--disabled):not(.chip--disabled-selected) {
+  border-color: var(--color-brand-primary-dark);
 }
 
-/* Disabled state */
+.chip--selected.chip--hover:not(.chip--disabled):not(.chip--disabled-selected) .chip__label {
+  color: var(--color-brand-primary-dark);
+}
+
+/* State: Disabled */
 .chip--disabled {
   cursor: not-allowed;
-  background-color: var(--color-background-light);
+  border-color: var(--color-outline-light);
 }
 
 .chip--disabled .chip__label {
@@ -127,10 +128,11 @@
   background-color: var(--color-background-light);
 }
 
-/* Disabled selected state */
+/* State: Disabled + Selected */
 .chip--disabled-selected {
   cursor: not-allowed;
   background-color: var(--color-background-light);
+  border-color: var(--color-outline-dark);
 }
 
 .chip--disabled-selected .chip__label {
@@ -141,38 +143,25 @@
   background-color: var(--color-background-dark);
 }
 
-.chip--disabled-selected .chip__checkbox-icon {
+.chip--disabled-selected .chip__checkbox-bg--checked {
+  background-color: var(--color-background-dark);
+}
+
+.chip--disabled-selected .chip__checkbox-check {
   color: var(--color-background-light);
 }
 
-/* Hover effects (only when not disabled) */
-.chip:not(.chip--disabled):hover.chip--default {
-  background-color: var(--color-hover-dark);
-}
-
-.chip:not(.chip--disabled):hover.chip--default .chip__label {
-  color: var(--color-text-primary);
-}
-
-/* Active/focus states */
-.chip:not(.chip--disabled):active {
-  transform: translateY(1px);
-}
-
-/* Accessibility improvements */
-@media (prefers-reduced-motion: reduce) {
-  .chip {
-    transition: none;
-  }
-}
-
-/* High contrast mode support */
+/* Accessibility - High Contrast Mode */
 @media (prefers-contrast: high) {
   .chip {
-    outline: 1px solid currentColor;
+    border-width: 2px;
   }
-  
-  .chip--selected {
-    outline-color: var(--color-brand-primary-dark);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .chip,
+  .chip__checkbox-bg {
+    transition: none;
   }
 }
