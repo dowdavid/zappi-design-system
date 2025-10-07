@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/zappi-design-system.svg?style=flat-square)](https://www.npmjs.com/package/zappi-design-system)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
-[![Build Status](https://github.com/YOUR-USERNAME/zappi-design-system/workflows/CI/badge.svg)](https://github.com/YOUR-USERNAME/zappi-design-system/actions)
+[![Build Status](https://github.com/dowdavid/zappi-design-system/workflows/CI/badge.svg)](https://github.com/dowdavid/zappi-design-system/actions)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](CONTRIBUTING.md)
 
 A comprehensive React component library with design tokens, themes, and pre-built UI components.
