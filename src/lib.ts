@@ -12,9 +12,11 @@
 // Import styles to be included in the bundle
 import './design-tokens/tokens.css';
 import './components/Button/Button.css';
+import './components/Checkbox/Checkbox.css';
 import './components/Chip/Chip.css';
 import './components/Drawer/Drawer.css';
 import './components/Modal/Modal.css';
+import './components/Radio/Radio.css';
 import './components/Tag/Tag.css';
 import './components/Toggle/Toggle.css';
 

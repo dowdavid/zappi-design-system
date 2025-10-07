@@ -189,6 +189,65 @@
       background: #e4e4e4;
     }
 
+    /* Checkbox and Radio styles */
+    .checkbox, .radio {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    .checkbox__box, .radio__button {
+      width: 16px;
+      height: 16px;
+      border: 1px solid #b2b2b2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.2s;
+      background: white;
+    }
+
+    .checkbox__box {
+      border-radius: 2px;
+    }
+
+    .radio__button {
+      border-radius: 8px;
+    }
+
+    .checkbox__box--checked {
+      background: #ff4d7c;
+      border-color: #ff4d7c;
+    }
+
+    .radio__button--checked {
+      border: 4px solid #ff4d7c;
+    }
+
+    .checkbox__box--checked svg,
+    .radio__button--checked svg {
+      color: white;
+    }
+
+    .checkbox--disabled .checkbox__box,
+    .radio--disabled .radio__button {
+      background: #f5f5f5;
+      border-color: #d1d1d1;
+      cursor: not-allowed;
+    }
+
+    .checkbox--disabled .checkbox__box--checked {
+      background: #d1d1d1;
+      border-color: #d1d1d1;
+    }
+
+    .radio--disabled .radio__button--checked {
+      background: #f5f5f5;
+      border: 4px solid #d1d1d1;
+    }
+
     .tag {
       display: inline-flex;
       align-items: center;
@@ -528,6 +587,77 @@
         <button class="button button--ghost button--small">Small</button>
         <button class="button button--ghost button--medium">Medium</button>
         <button class="button button--ghost button--large">Large</button>
+      </div>
+    </div>
+
+    <!-- Checkbox Section -->
+    <div class="section">
+      <h2>Checkbox</h2>
+      
+      <div class="component-group">
+        <span class="component-label">Checkbox States</span>
+        <label class="checkbox">
+          <span class="checkbox__box">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="display: none;">
+              <path d="M10 3L4.5 8.5L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span>Default</span>
+        </label>
+        <label class="checkbox">
+          <span class="checkbox__box checkbox__box--checked">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M10 3L4.5 8.5L2 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span>Checked</span>
+        </label>
+        <label class="checkbox">
+          <span class="checkbox__box checkbox__box--checked">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M3 6H9" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span>Indeterminate</span>
+        </label>
+        <label class="checkbox checkbox--disabled">
+          <span class="checkbox__box">
+          </span>
+          <span>Disabled</span>
+        </label>
+        <label class="checkbox checkbox--disabled">
+          <span class="checkbox__box checkbox__box--checked">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M10 3L4.5 8.5L2 6" stroke="#f5f5f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span>Disabled Checked</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Radio Section -->
+    <div class="section">
+      <h2>Radio</h2>
+      
+      <div class="component-group">
+        <span class="component-label">Radio States</span>
+        <label class="radio">
+          <span class="radio__button"></span>
+          <span>Default</span>
+        </label>
+        <label class="radio">
+          <span class="radio__button radio__button--checked"></span>
+          <span>Checked</span>
+        </label>
+        <label class="radio radio--disabled">
+          <span class="radio__button"></span>
+          <span>Disabled</span>
+        </label>
+        <label class="radio radio--disabled">
+          <span class="radio__button radio__button--checked"></span>
+          <span>Disabled Checked</span>
+        </label>
       </div>
     </div>
 

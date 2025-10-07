@@ -93,9 +93,11 @@ This creates the `dist/` folder with:
 The design system includes:
 
 - **Button** - Primary, secondary, and ghost variants with 3 sizes
-- **Chip** - Compact labels with optional close functionality
+- **Checkbox** - Standard checkboxes with checked, indeterminate, and disabled states
+- **Chip** - Multiselect chips with checkboxes
 - **Drawer** - Right-side modal drawer with overlay and animations
 - **Modal** - Centered modal dialog in small, default, and large sizes
+- **Radio** - Radio buttons with checked and disabled states
 - **Tag** - Status and category labels with multiple variants
 - **Toggle** - Switch component for binary states
 
@@ -118,9 +120,11 @@ See [TYPOGRAPHY_REFERENCE.md](./TYPOGRAPHY_REFERENCE.md) for the complete typogr
 src/
 ├── components/          # All UI components
 │   ├── Button/
+│   ├── Checkbox/
 │   ├── Chip/
 │   ├── Drawer/
 │   ├── Modal/
+│   ├── Radio/
 │   ├── Tag/
 │   └── Toggle/
 ├── design-tokens/      # CSS variables and tokens
