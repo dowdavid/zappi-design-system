@@ -98,6 +98,7 @@ The design system includes:
 - **Drawer** - Right-side modal drawer with overlay and animations
 - **Modal** - Centered modal dialog in small, default, and large sizes
 - **Radio** - Radio buttons with checked and disabled states
+- **Select** - Dropdown select with single/multi-select, label and emphasis variants
 - **Tag** - Status and category labels with multiple variants
 - **Toggle** - Switch component for binary states
 
@@ -125,6 +126,7 @@ src/
 │   ├── Drawer/
 │   ├── Modal/
 │   ├── Radio/
+│   ├── Select/
 │   ├── Tag/
 │   └── Toggle/
 ├── design-tokens/      # CSS variables and tokens

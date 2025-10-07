@@ -358,6 +358,90 @@
       color: white;
     }
 
+    /* Select preview styles */
+    .select-preview {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      width: 290px;
+    }
+
+    .select-preview--label {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .select-label {
+      font-family: var(--font-family-primary);
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.8);
+    }
+
+    .select-field {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      background: white;
+      border: 1px solid #d1d1d1;
+      border-radius: 4px;
+      font-family: var(--font-family-primary);
+      font-size: 14px;
+      line-height: 26px;
+      color: rgba(0, 0, 0, 0.8);
+    }
+
+    .select-field span {
+      flex: 1;
+    }
+
+    .select-field svg {
+      flex-shrink: 0;
+      color: rgba(0, 0, 0, 0.8);
+    }
+
+    .select-field--label {
+      background: transparent;
+      border: none;
+      padding: 0;
+      gap: 4px;
+    }
+
+    .select-field--emphasis {
+      background: transparent;
+      border: none;
+      padding: 0;
+      gap: 4px;
+      font-weight: 600;
+      color: #ff4d7c;
+    }
+
+    .select-field--emphasis svg {
+      color: #ff4d7c;
+    }
+
+    .select-field--error {
+      background: #fdf3f3;
+      border-color: #db4a46;
+    }
+
+    .select-error {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      font-size: 12px;
+      line-height: 18px;
+      color: #a92f2c;
+    }
+
+    .select-error svg {
+      flex-shrink: 0;
+      color: #a92f2c;
+      margin-top: 1px;
+    }
+
     .toggle {
       position: relative;
       display: inline-block;
@@ -909,6 +993,71 @@
           </span>
           <span class="tag__label">Large</span>
         </span>
+      </div>
+    </div>
+
+    <!-- Select Section -->
+    <div class="section">
+      <h2>Select Dropdown</h2>
+      <p>Note: This is a preview - use the React component for full functionality</p>
+      
+      <div class="component-group">
+        <span class="component-label">Single Select</span>
+        <div class="select-preview">
+          <label class="select-label">Label</label>
+          <div class="select-field">
+            <span>Option 1</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      
+      <div class="component-group">
+        <span class="component-label">Label Type</span>
+        <div class="select-preview select-preview--label">
+          <span class="select-label">Label</span>
+          <div class="select-field select-field--label">
+            <span>Text</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-group">
+        <span class="component-label">High Emphasis</span>
+        <div class="select-preview select-preview--label">
+          <span class="select-label">Label</span>
+          <div class="select-field select-field--emphasis">
+            <span>Text</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-group">
+        <span class="component-label">Error State</span>
+        <div class="select-preview">
+          <label class="select-label">Label</label>
+          <div class="select-field select-field--error">
+            <span style="color: rgba(0,0,0,0.4);">Text</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="select-error">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M8 1L1 14H15L8 1Z" fill="currentColor"/>
+              <path d="M8 6V9M8 11V11.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span>Alert text</span>
+          </div>
+        </div>
       </div>
     </div>
 

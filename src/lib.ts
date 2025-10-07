@@ -17,6 +17,7 @@ import './components/Chip/Chip.css';
 import './components/Drawer/Drawer.css';
 import './components/Modal/Modal.css';
 import './components/Radio/Radio.css';
+import './components/Select/Select.css';
 import './components/Tag/Tag.css';
 import './components/Toggle/Toggle.css';
 
