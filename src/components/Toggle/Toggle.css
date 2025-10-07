@@ -1,0 +1,173 @@
+/* Import design tokens */
+@import '../../design-tokens/tokens.css';
+
+/* Toggle Component Styles */
+
+/* Additional design tokens for Toggle component */
+:root {
+  /* Toggle specific colors from Figma variables */
+  --toggle-track-active: var(--color-brand-primary);
+  --toggle-track-inactive: #b2b2b2;
+  --toggle-track-disabled-active: rgba(255, 77, 124, 0.1);
+  --toggle-track-disabled-inactive: #d1d1d1;
+  --toggle-thumb-color: #ffffff;
+  --toggle-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+  
+  /* Toggle dimensions */
+  --toggle-small-width: 32px;
+  --toggle-small-height: 16px;
+  --toggle-small-thumb: 12px;
+  --toggle-large-width: 48px;
+  --toggle-large-height: 24px;
+  --toggle-large-thumb: 18px;
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  position: relative;
+  outline: none;
+}
+
+.toggle:focus-visible {
+  outline: 2px solid var(--color-brand-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-full);
+}
+
+.toggle--disabled {
+  cursor: not-allowed;
+}
+
+.toggle__track {
+  position: relative;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-normal);
+  display: flex;
+  align-items: center;
+}
+
+.toggle__thumb {
+  background-color: var(--toggle-thumb-color);
+  border-radius: var(--radius-full);
+  box-shadow: var(--toggle-shadow);
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+/* Size variants */
+.toggle--small .toggle__track {
+  width: var(--toggle-small-width);
+  height: var(--toggle-small-height);
+  background-color: var(--toggle-track-inactive);
+}
+
+.toggle--small .toggle__thumb {
+  width: var(--toggle-small-thumb);
+  height: var(--toggle-small-thumb);
+  transform: translateX(2px);
+}
+
+.toggle--large .toggle__track {
+  width: var(--toggle-large-width);
+  height: var(--toggle-large-height);
+  background-color: var(--toggle-track-inactive);
+}
+
+.toggle--large .toggle__thumb {
+  width: var(--toggle-large-thumb);
+  height: var(--toggle-large-thumb);
+  transform: translateX(3px);
+}
+
+/* Checked state */
+.toggle--checked.toggle--small .toggle__track {
+  background-color: var(--toggle-track-active);
+}
+
+.toggle--checked.toggle--small .toggle__thumb {
+  transform: translateX(18px);
+}
+
+.toggle--checked.toggle--large .toggle__track {
+  background-color: var(--toggle-track-active);
+}
+
+.toggle--checked.toggle--large .toggle__thumb {
+  transform: translateX(27px);
+}
+
+/* Disabled states */
+.toggle--disabled.toggle--small .toggle__track {
+  background-color: var(--toggle-track-disabled-inactive);
+}
+
+.toggle--disabled.toggle--checked.toggle--small .toggle__track {
+  background-color: var(--toggle-track-disabled-active);
+}
+
+.toggle--disabled.toggle--large .toggle__track {
+  background-color: var(--toggle-track-disabled-inactive);
+}
+
+.toggle--disabled.toggle--checked.toggle--large .toggle__track {
+  background-color: var(--toggle-track-disabled-active);
+}
+
+/* Hover states (only for enabled toggles) */
+.toggle:not(.toggle--disabled):hover .toggle__track {
+  filter: brightness(0.95);
+}
+
+.toggle:not(.toggle--disabled):hover .toggle__thumb {
+  box-shadow: 
+    var(--toggle-shadow),
+    0 0 0 4px rgba(255, 77, 124, 0.1);
+}
+
+/* Active/pressed state */
+.toggle:not(.toggle--disabled):active .toggle__thumb {
+  transform: scale(0.95);
+}
+
+.toggle--checked:not(.toggle--disabled):active.toggle--small .toggle__thumb {
+  transform: translateX(18px) scale(0.95);
+}
+
+.toggle--checked:not(.toggle--disabled):active.toggle--large .toggle__thumb {
+  transform: translateX(27px) scale(0.95);
+}
+
+/* Smooth animations */
+@media (prefers-reduced-motion: no-preference) {
+  .toggle__track,
+  .toggle__thumb {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .toggle__track {
+    border: 2px solid currentColor;
+  }
+  
+  .toggle--checked .toggle__track {
+    background-color: var(--color-text-primary);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .toggle__track,
+  .toggle__thumb {
+    transition: none;
+  }
+}

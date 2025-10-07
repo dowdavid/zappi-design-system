@@ -1,0 +1,325 @@
+/* Import design tokens */
+@import '../../design-tokens/tokens.css';
+
+/* Modal overlay - full screen container */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  animation: modal-overlay-fade-in var(--transition-normal);
+}
+
+.modal-overlay--visible {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-overlay--transparent {
+  background-color: transparent;
+}
+
+@keyframes modal-overlay-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal container */
+.modal {
+  position: relative;
+  background-color: var(--color-background-white);
+  border-radius: var(--radius-sm);
+  box-shadow: 
+    0px 0px 0px 1px rgba(25, 37, 50, 0.1),
+    0px -6px 16px -6px rgba(25, 37, 50, 0.03),
+    0px 8px 16px -8px rgba(25, 37, 50, 0.2),
+    0px 13px 27px -5px rgba(25, 37, 50, 0.15);
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 60px);
+  animation: modal-slide-up var(--transition-normal);
+}
+
+@keyframes modal-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Size variants */
+.modal--small {
+  width: 300px;
+}
+
+.modal--default {
+  width: 600px;
+}
+
+.modal--large {
+  width: 900px;
+}
+
+/* Header section */
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: var(--spacing-4) var(--spacing-6);
+  flex-shrink: 0;
+}
+
+.modal--small .modal__header {
+  gap: var(--spacing-6);
+}
+
+.modal--default .modal__header {
+  gap: var(--spacing-8);
+}
+
+.modal--large .modal__header {
+  gap: var(--spacing-10);
+}
+
+.modal__header-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-0-5);
+  min-width: 0;
+}
+
+/* Title */
+.modal__title {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-title-medium);
+  line-height: var(--line-height-title-medium);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin: 0;
+  padding: 0;
+}
+
+/* Secondary text */
+.modal__secondary-text {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-label);
+  line-height: var(--line-height-label);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* Make links in secondary text pink */
+.modal__secondary-text :global(a),
+.modal__secondary-text :global(span[style*="color"]) {
+  color: var(--color-brand-primary);
+  text-decoration: none;
+}
+
+/* Close button */
+.modal__close-button {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  padding: var(--spacing-1-5);
+  border: none;
+  background: transparent;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  transition: all var(--transition-normal);
+}
+
+.modal__close-button:hover {
+  background-color: var(--color-background-light);
+  color: var(--color-text-primary);
+}
+
+.modal__close-button:active {
+  transform: scale(0.95);
+}
+
+/* Content wrapper */
+.modal__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-2) var(--spacing-6) var(--spacing-4);
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.modal--small .modal__content-wrapper {
+  gap: var(--spacing-6);
+}
+
+.modal--default .modal__content-wrapper,
+.modal--large .modal__content-wrapper {
+  gap: var(--spacing-6);
+}
+
+/* Content area */
+.modal__content {
+  flex-shrink: 0;
+  width: 100%;
+  min-height: 0;
+}
+
+/* Actions section */
+.modal__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-6);
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.modal__actions-left {
+  flex: 1;
+  display: flex;
+  gap: var(--spacing-3);
+}
+
+.modal__actions-right {
+  display: flex;
+  gap: var(--spacing-3);
+  flex-shrink: 0;
+}
+
+/* Buttons */
+.modal__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  min-width: 72px;
+  padding: 9px var(--spacing-4);
+  border-radius: var(--radius-full);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-label-bold);
+  line-height: var(--line-height-label-bold);
+  font-weight: var(--font-weight-semibold);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  white-space: nowrap;
+}
+
+.modal__button--cancel {
+  background-color: var(--color-background-dark);
+  color: var(--color-text-secondary);
+}
+
+.modal__button--cancel:hover {
+  background-color: #d1d1d1;
+  color: var(--color-text-primary);
+}
+
+.modal__button--primary {
+  background-color: var(--color-brand-primary);
+  color: var(--color-text-inverted);
+}
+
+.modal__button--primary:hover {
+  background-color: var(--color-brand-primary-dark);
+}
+
+.modal__button--destructive {
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  padding-left: var(--spacing-3);
+  padding-right: var(--spacing-4);
+}
+
+.modal__button--destructive:hover {
+  background-color: var(--color-background-light);
+  color: var(--color-text-primary);
+}
+
+.modal__button--destructive svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+}
+
+.modal__button:active {
+  transform: translateY(1px);
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .modal-overlay,
+  .modal {
+    animation: none;
+  }
+  
+  .modal__button:active,
+  .modal__close-button:active {
+    transform: none;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 16px;
+  }
+  
+  .modal--default,
+  .modal--large {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .modal--small {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 400px) {
+  .modal__header {
+    padding: var(--spacing-3) var(--spacing-4);
+  }
+  
+  .modal__content-wrapper {
+    padding: var(--spacing-2) var(--spacing-4) var(--spacing-3);
+  }
+  
+  .modal__actions {
+    flex-direction: column-reverse;
+    gap: var(--spacing-3);
+  }
+  
+  .modal__actions-left,
+  .modal__actions-right {
+    width: 100%;
+  }
+  
+  .modal__actions-right {
+    flex-direction: column-reverse;
+  }
+  
+  .modal__button {
+    width: 100%;
+  }
+}
+

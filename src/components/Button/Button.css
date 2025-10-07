@@ -1,0 +1,188 @@
+/* Import design tokens */
+@import '../../design-tokens/tokens.css';
+
+/* Base button styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-semibold);
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-brand-primary);
+  outline-offset: 2px;
+}
+
+/* Button content wrapper */
+.btn__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-1-5);
+  flex: 1;
+  min-width: 0;
+}
+
+.btn__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.btn__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Size variants */
+.btn--small {
+  padding: var(--spacing-1) var(--spacing-2);
+  font-size: var(--font-size-caption);
+  line-height: var(--line-height-caption);
+}
+
+.btn--small .btn__content {
+  gap: var(--spacing-1);
+}
+
+.btn--default {
+  padding: var(--spacing-1-5) var(--spacing-3);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+}
+
+.btn--large {
+  padding: 9px var(--spacing-4);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+}
+
+.btn--large .btn__content {
+  gap: var(--spacing-2);
+}
+
+/* Style variants - Filled */
+.btn--filled {
+  border: none;
+}
+
+/* Style variants - Naked */
+.btn--naked {
+  background: var(--color-background-transparent);
+  border: none;
+}
+
+/* Emphasis variants - High emphasis filled */
+.btn--filled.btn--high-emphasis {
+  background-color: var(--color-brand-primary);
+  color: var(--color-text-inverted);
+}
+
+.btn--filled.btn--high-emphasis:hover:not(.btn--disabled) {
+  background-color: var(--color-brand-primary-dark);
+}
+
+.btn--filled.btn--high-emphasis.btn--disabled {
+  background-color: var(--color-background-light);
+  color: var(--color-text-disabled);
+  cursor: not-allowed;
+}
+
+/* Emphasis variants - Low emphasis filled (Secondary button) */
+.btn--filled.btn--low-emphasis {
+  background-color: var(--color-background-dark);
+  color: var(--color-text-primary);
+}
+
+.btn--filled.btn--low-emphasis:hover:not(.btn--disabled) {
+  background-color: #d1d1d1;
+  color: var(--color-text-primary);
+}
+
+.btn--filled.btn--low-emphasis.btn--disabled {
+  background-color: var(--color-background-light);
+  color: var(--color-text-disabled);
+  cursor: not-allowed;
+}
+
+/* Emphasis variants - High emphasis naked */
+.btn--naked.btn--high-emphasis {
+  color: var(--color-brand-primary);
+}
+
+.btn--naked.btn--high-emphasis:hover:not(.btn--disabled) {
+  background-color: var(--color-brand-primary-light);
+  color: var(--color-brand-primary-dark);
+}
+
+.btn--naked.btn--high-emphasis.btn--disabled {
+  color: var(--color-text-disabled);
+  cursor: not-allowed;
+}
+
+/* Emphasis variants - Low emphasis naked */
+.btn--naked.btn--low-emphasis {
+  color: var(--color-text-secondary);
+}
+
+.btn--naked.btn--low-emphasis:hover:not(.btn--disabled) {
+  background-color: var(--color-hover-light);
+  color: var(--color-text-primary);
+}
+
+.btn--naked.btn--low-emphasis.btn--disabled {
+  color: var(--color-text-disabled);
+  cursor: not-allowed;
+}
+
+/* Active states */
+.btn:active:not(.btn--disabled) {
+  transform: translateY(1px);
+}
+
+/* Icon sizing */
+.btn--small .btn__icon {
+  width: 14px;
+  height: 14px;
+}
+
+.btn--default .btn__icon,
+.btn--large .btn__icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+  
+  .btn:active:not(.btn--disabled) {
+    transform: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .btn--filled {
+    border: 2px solid currentColor;
+  }
+  
+  .btn--naked {
+    border: 1px solid currentColor;
+  }
+}

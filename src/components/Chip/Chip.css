@@ -1,0 +1,178 @@
+/* Import design tokens */
+@import '../../design-tokens/tokens.css';
+
+/* Base chip styles */
+.chip {
+  display: inline-flex;
+  background-color: var(--color-background-white);
+  border: none;
+  border-radius: var(--radius-full);
+  font-family: var(--font-family-primary);
+  font-weight: 400;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.chip:focus {
+  outline: 2px solid var(--color-brand-primary);
+  outline-offset: 2px;
+}
+
+/* Size variants */
+.chip--default {
+  padding: var(--spacing-1-5) var(--spacing-3);
+  gap: var(--spacing-3);
+}
+
+.chip--small {
+  padding: var(--spacing-1) var(--spacing-2);
+  gap: var(--spacing-3);
+}
+
+/* Content container */
+.chip__content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+/* Label styles */
+.chip__label {
+  white-space: nowrap;
+  line-height: 1;
+  color: var(--color-text-primary);
+}
+
+.chip--default .chip__label {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.chip--small .chip__label {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+/* Checkbox styles */
+.chip__checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.chip__checkbox-bg {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  background-color: var(--color-background-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.chip__checkbox-icon {
+  width: 12px;
+  height: 12px;
+  color: var(--color-text-inverted);
+}
+
+/* State variants */
+
+/* Default state */
+.chip--default {
+  background-color: var(--color-background-light);
+}
+
+.chip--default .chip__label {
+  color: var(--color-text-primary);
+}
+
+/* Hover state */
+.chip--hover {
+  background-color: var(--color-hover-dark);
+}
+
+.chip--hover .chip__label {
+  color: var(--color-brand-primary-dark);
+}
+
+/* Selected state */
+.chip--selected {
+  background-color: var(--color-brand-primary-light);
+}
+
+.chip--selected .chip__label {
+  color: var(--color-brand-primary);
+}
+
+.chip--selected .chip__checkbox-bg {
+  background-color: var(--color-brand-primary);
+}
+
+/* Disabled state */
+.chip--disabled {
+  cursor: not-allowed;
+  background-color: var(--color-background-light);
+}
+
+.chip--disabled .chip__label {
+  color: var(--color-text-disabled);
+}
+
+.chip--disabled .chip__checkbox-bg {
+  background-color: var(--color-background-light);
+}
+
+/* Disabled selected state */
+.chip--disabled-selected {
+  cursor: not-allowed;
+  background-color: var(--color-background-light);
+}
+
+.chip--disabled-selected .chip__label {
+  color: var(--color-text-disabled);
+}
+
+.chip--disabled-selected .chip__checkbox-bg {
+  background-color: var(--color-background-dark);
+}
+
+.chip--disabled-selected .chip__checkbox-icon {
+  color: var(--color-background-light);
+}
+
+/* Hover effects (only when not disabled) */
+.chip:not(.chip--disabled):hover.chip--default {
+  background-color: var(--color-hover-dark);
+}
+
+.chip:not(.chip--disabled):hover.chip--default .chip__label {
+  color: var(--color-text-primary);
+}
+
+/* Active/focus states */
+.chip:not(.chip--disabled):active {
+  transform: translateY(1px);
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .chip {
+    transition: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .chip {
+    outline: 1px solid currentColor;
+  }
+  
+  .chip--selected {
+    outline-color: var(--color-brand-primary-dark);
+  }
+}

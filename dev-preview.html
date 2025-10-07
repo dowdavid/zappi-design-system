@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zappi Design System - Component Preview</title>
+  <link rel="stylesheet" href="./dist/index.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-family-primary);
+      padding: 40px;
+      background: var(--color-background-light);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+    }
+
+    h1 {
+      font-size: var(--font-size-display-medium);
+      line-height: var(--line-height-display-medium);
+      font-weight: var(--font-weight-bold);
+      color: var(--color-text-primary);
+      margin-bottom: 16px;
+    }
+
+    .subtitle {
+      font-size: var(--font-size-body-large);
+      line-height: var(--line-height-body-large);
+      color: var(--color-text-secondary);
+      margin-bottom: 40px;
+    }
+
+    .section {
+      margin-bottom: 48px;
+    }
+
+    .section h2 {
+      font-size: var(--font-size-headline-medium);
+      line-height: var(--line-height-headline-medium);
+      font-weight: var(--font-weight-bold);
+      color: var(--color-text-primary);
+      margin-bottom: 24px;
+    }
+
+    .component-group {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 24px;
+      background: var(--color-background-light);
+      border-radius: var(--radius-md);
+      margin-bottom: 16px;
+    }
+
+    .component-label {
+      font-size: var(--font-size-caption);
+      color: var(--color-text-secondary);
+      font-weight: var(--font-weight-semibold);
+      width: 100%;
+      margin-bottom: 8px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 16px;
+      border-radius: var(--radius-full);
+      font-size: var(--font-size-label);
+      line-height: var(--line-height-label);
+      font-weight: var(--font-weight-semibold);
+      cursor: pointer;
+      transition: var(--transition-normal);
+      border: none;
+      font-family: var(--font-family-primary);
+    }
+
+    .button--primary {
+      background-color: var(--color-brand-primary);
+      color: var(--color-text-inverted);
+    }
+
+    .button--primary:hover {
+      background-color: var(--color-brand-primary-dark);
+    }
+
+    .button--secondary {
+      background-color: var(--color-background-dark);
+      color: var(--color-text-primary);
+    }
+
+    .button--secondary:hover {
+      background-color: #d1d1d1;
+    }
+
+    .button--ghost {
+      background-color: transparent;
+      color: var(--color-brand-primary);
+    }
+
+    .button--ghost:hover {
+      background-color: var(--color-brand-primary-light);
+    }
+
+    .button--small {
+      padding: 4px 12px;
+      font-size: 12px;
+    }
+
+    .button--medium {
+      padding: 8px 16px;
+    }
+
+    .button--large {
+      padding: 12px 24px;
+      font-size: 16px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 12px;
+      border-radius: var(--radius-full);
+      font-size: var(--font-size-label);
+      font-weight: var(--font-weight-regular);
+      gap: 6px;
+      border: none;
+    }
+
+    .chip--primary {
+      background-color: var(--color-brand-primary-light);
+      color: var(--color-brand-primary);
+    }
+
+    .chip--secondary {
+      background-color: var(--color-background-light);
+      color: var(--color-text-primary);
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 8px;
+      border-radius: var(--radius-full);
+      font-size: var(--font-size-caption);
+      font-weight: var(--font-weight-semibold);
+    }
+
+    .tag--primary {
+      background-color: var(--color-brand-primary-light);
+      color: var(--color-brand-primary);
+    }
+
+    .tag--success {
+      background-color: rgba(50, 135, 50, 0.1);
+      color: #328732;
+    }
+
+    .tag--warning {
+      background-color: rgba(255, 165, 0, 0.1);
+      color: #ff8c00;
+    }
+
+    .tag--error {
+      background-color: rgba(169, 47, 44, 0.1);
+      color: #a92f2c;
+    }
+
+    .toggle {
+      position: relative;
+      display: inline-block;
+      width: 44px;
+      height: 24px;
+    }
+
+    .toggle input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .toggle-slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--color-outline-light);
+      transition: var(--transition-normal);
+      border-radius: var(--radius-full);
+    }
+
+    .toggle-slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: var(--transition-normal);
+      border-radius: 50%;
+    }
+
+    .toggle input:checked + .toggle-slider {
+      background-color: var(--color-brand-primary);
+    }
+
+    .toggle input:checked + .toggle-slider:before {
+      transform: translateX(20px);
+    }
+
+    .code-block {
+      background: #f5f5f5;
+      padding: 16px;
+      border-radius: var(--radius-md);
+      font-family: 'Monaco', 'Courier New', monospace;
+      font-size: 13px;
+      overflow-x: auto;
+      margin-top: 16px;
+    }
+
+    /* Drawer styles */
+    .drawer-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1000;
+      display: none;
+      justify-content: flex-end;
+    }
+
+    .drawer-overlay.open {
+      display: flex;
+    }
+
+    .drawer-scrim {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .drawer {
+      position: relative;
+      width: 600px;
+      height: 100%;
+      background: white;
+      border-top-left-radius: var(--radius-lg);
+      border-bottom-left-radius: var(--radius-lg);
+      box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
+      display: flex;
+      flex-direction: column;
+      z-index: 1;
+    }
+
+    .drawer__header {
+      padding: var(--spacing-8) 56px var(--spacing-4);
+      border-bottom: 1px solid var(--color-outline-light);
+    }
+
+    .drawer__header-main {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .drawer__title {
+      font-size: var(--font-size-headline-small);
+      line-height: var(--line-height-headline-small);
+      font-weight: var(--font-weight-bold);
+      color: var(--color-text-primary);
+      margin: 0;
+    }
+
+    .drawer__actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .drawer__description {
+      font-size: var(--font-size-body-small);
+      line-height: var(--line-height-body-small);
+      color: var(--color-text-secondary);
+    }
+
+    .drawer__content {
+      flex: 1;
+      padding: 24px 56px;
+      overflow-y: auto;
+    }
+
+    /* Modal styles */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2000;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-overlay.open {
+      display: flex;
+    }
+
+    .modal {
+      position: relative;
+      background: white;
+      border-radius: var(--radius-sm);
+      box-shadow: 0px 0px 0px 1px rgba(25, 37, 50, 0.1),
+                  0px -6px 16px -6px rgba(25, 37, 50, 0.03),
+                  0px 8px 16px -8px rgba(25, 37, 50, 0.2),
+                  0px 13px 27px -5px rgba(25, 37, 50, 0.15);
+      display: flex;
+      flex-direction: column;
+      max-height: calc(100vh - 60px);
+    }
+
+    .modal--small {
+      width: 300px;
+    }
+
+    .modal--default {
+      width: 600px;
+    }
+
+    .modal--large {
+      width: 900px;
+    }
+
+    .modal__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 16px 24px;
+      gap: 32px;
+    }
+
+    .modal__header-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .modal__title {
+      font-size: var(--font-size-title-medium);
+      line-height: var(--line-height-title-medium);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-text-primary);
+      margin: 0;
+    }
+
+    .modal__secondary-text {
+      font-size: var(--font-size-label);
+      line-height: var(--line-height-label);
+      color: var(--color-text-secondary);
+      margin: 0;
+    }
+
+    .modal__close-button {
+      width: 26px;
+      height: 26px;
+      padding: 6px;
+      border: none;
+      background: transparent;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-text-secondary);
+      transition: all 0.2s;
+    }
+
+    .modal__close-button:hover {
+      background-color: var(--color-background-light);
+    }
+
+    .modal__content-wrapper {
+      padding: 8px 24px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .modal__content {
+      padding: 12px;
+      background: #fdf3f3;
+      border: 1px dashed #db4a46;
+      border-radius: 4px;
+      color: #a92f2c;
+      font-size: 14px;
+    }
+
+    .modal__actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .modal__actions-left {
+      flex: 1;
+      display: flex;
+    }
+
+    .modal__actions-right {
+      display: flex;
+      gap: 12px;
+    }
+
+    .modal__button--destructive {
+      background: transparent;
+      border: none;
+      color: var(--color-text-secondary);
+      font-family: var(--font-family-primary);
+      font-size: 14px;
+      font-weight: var(--font-weight-semibold);
+      padding: 9px 12px 9px 12px;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+
+    .modal__button--destructive:hover {
+      background-color: var(--color-background-light);
+    }
+
+    .modal__button--destructive svg {
+      width: 24px;
+      height: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Zappi Design System</h1>
+    <p class="subtitle">Component Library Preview</p>
+
+    <!-- Buttons Section -->
+    <div class="section">
+      <h2>Buttons</h2>
+      
+      <div class="component-group">
+        <span class="component-label">Primary Buttons</span>
+        <button class="button button--primary button--small">Small</button>
+        <button class="button button--primary button--medium">Medium</button>
+        <button class="button button--primary button--large">Large</button>
+      </div>
+
+      <div class="component-group">
+        <span class="component-label">Secondary Buttons</span>
+        <button class="button button--secondary button--small">Small</button>
+        <button class="button button--secondary button--medium">Medium</button>
+        <button class="button button--secondary button--large">Large</button>
+      </div>
+
+      <div class="component-group">
+        <span class="component-label">Ghost Buttons</span>
+        <button class="button button--ghost button--small">Small</button>
+        <button class="button button--ghost button--medium">Medium</button>
+        <button class="button button--ghost button--large">Large</button>
+      </div>
+    </div>
+
+    <!-- Chips Section -->
+    <div class="section">
+      <h2>Chips</h2>
+      
+      <div class="component-group">
+        <span class="component-label">Chip Variants</span>
+        <span class="chip chip--primary">Primary Chip</span>
+        <span class="chip chip--secondary">Secondary Chip</span>
+        <span class="chip chip--primary">✓ With Icon</span>
+      </div>
+    </div>
+
+    <!-- Tags Section -->
+    <div class="section">
+      <h2>Tags</h2>
+      
+      <div class="component-group">
+        <span class="component-label">Tag Variants</span>
+        <span class="tag tag--primary">Primary</span>
+        <span class="tag tag--success">Success</span>
+        <span class="tag tag--warning">Warning</span>
+        <span class="tag tag--error">Error</span>
+      </div>
+    </div>
+
+    <!-- Toggle Section -->
+    <div class="section">
+      <h2>Toggle Switch</h2>
+      
+      <div class="component-group">
+        <span class="component-label">Toggle States</span>
+        <label class="toggle">
+          <input type="checkbox">
+          <span class="toggle-slider"></span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" checked>
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Drawer Section -->
+    <div class="section">
+      <h2>Drawer (Modal)</h2>
+      
+      <div class="component-group">
+        <span class="component-label">Right Side Drawer with Overlay</span>
+        <button class="button button--primary button--medium" onclick="openDrawer()">
+          Open Drawer
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal Section -->
+    <div class="section">
+      <h2>Modal</h2>
+      
+      <div class="component-group">
+        <span class="component-label">Centered Modals with Different Sizes</span>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <button class="button button--primary button--small" onclick="openModal('small')">
+            Small Modal
+          </button>
+          <button class="button button--primary button--small" onclick="openModal('default')">
+            Default Modal
+          </button>
+          <button class="button button--primary button--small" onclick="openModal('large')">
+            Large Modal
+          </button>
+          <button class="button button--secondary button--small" onclick="openModal('destructive')">
+            With Remove
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Usage Example -->
+    <div class="section">
+      <h2>Usage in React</h2>
+      <div class="code-block">
+<pre>import 'zappi-design-system/styles';
+import { Button, Chip, Tag, Toggle } from 'zappi-design-system';
+
+function App() {
+  return (
+    &lt;div&gt;
+      &lt;Button variant="primary" size="medium"&gt;
+        Click Me
+      &lt;/Button&gt;
+      
+      &lt;Chip label="Active" variant="primary" /&gt;
+      
+      &lt;Tag label="New" variant="success" /&gt;
+      
+      &lt;Toggle checked={true} onChange={() =&gt; {}} /&gt;
+    &lt;/div&gt;
+  );
+}</pre>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Modal Components -->
+  <div class="modal-overlay" id="modalSmall">
+    <div class="modal modal--small">
+      <div class="modal__header">
+        <div class="modal__header-content">
+          <h2 class="modal__title">Title</h2>
+          <p class="modal__secondary-text">Optional secondary <span style="color: #ff4d7c;">click here</span></p>
+        </div>
+        <button class="modal__close-button" onclick="closeModal('small')">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 1L13 13M1 13L13 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal__content-wrapper">
+        <div class="modal__content">
+          <strong>Placeholder slot</strong><br>
+          Small modal (300px) for simple confirmations
+        </div>
+        <div class="modal__actions">
+          <div class="modal__actions-right">
+            <button class="button button--secondary button--small" onclick="closeModal('small')">Cancel</button>
+            <button class="button button--primary button--small" onclick="closeModal('small')">Primary</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modalDefault">
+    <div class="modal modal--default">
+      <div class="modal__header">
+        <div class="modal__header-content">
+          <h2 class="modal__title">Title</h2>
+          <p class="modal__secondary-text">Optional secondary text here, should be small text <span style="color: #ff4d7c;">click here</span></p>
+        </div>
+        <button class="modal__close-button" onclick="closeModal('default')">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 1L13 13M1 13L13 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal__content-wrapper">
+        <div class="modal__content">
+          <strong>Placeholder slot</strong><br>
+          Default modal (600px) for standard interactions
+        </div>
+        <div class="modal__actions">
+          <div class="modal__actions-right">
+            <button class="button button--secondary button--small" onclick="closeModal('default')">Cancel</button>
+            <button class="button button--primary button--small" onclick="closeModal('default')">Primary</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modalLarge">
+    <div class="modal modal--large">
+      <div class="modal__header">
+        <div class="modal__header-content">
+          <h2 class="modal__title">Title</h2>
+          <p class="modal__secondary-text">Optional secondary text here, should be small text <span style="color: #ff4d7c;">click here</span></p>
+        </div>
+        <button class="modal__close-button" onclick="closeModal('large')">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 1L13 13M1 13L13 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal__content-wrapper">
+        <div class="modal__content">
+          <strong>Placeholder slot</strong><br>
+          Large modal (900px) for complex forms or content
+        </div>
+        <div class="modal__actions">
+          <div class="modal__actions-right">
+            <button class="button button--secondary button--small" onclick="closeModal('large')">Cancel</button>
+            <button class="button button--primary button--small" onclick="closeModal('large')">Primary</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modalDestructive">
+    <div class="modal modal--default">
+      <div class="modal__header">
+        <div class="modal__header-content">
+          <h2 class="modal__title">Delete Item</h2>
+          <p class="modal__secondary-text">This action cannot be undone</p>
+        </div>
+        <button class="modal__close-button" onclick="closeModal('destructive')">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 1L13 13M1 13L13 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal__content-wrapper">
+        <div class="modal__content">
+          <strong>Destructive Action Example</strong><br>
+          Modal with optional Remove/Delete button on the left
+        </div>
+        <div class="modal__actions">
+          <div class="modal__actions-left">
+            <button class="modal__button--destructive" onclick="alert('Item removed!'); closeModal('destructive')">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M3 6H21M8 6V4C8 3.44772 8.44772 3 9 3H15C15.5523 3 16 3.44772 16 4V6M19 6V20C19 20.5523 18.5523 21 18 21H6C5.44772 21 5 20.5523 5 20V6" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+              </svg>
+              Remove
+            </button>
+          </div>
+          <div class="modal__actions-right">
+            <button class="button button--secondary button--small" onclick="closeModal('destructive')">Cancel</button>
+            <button class="button button--primary button--small" onclick="closeModal('destructive')">Confirm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Drawer Component -->
+  <div class="drawer-overlay" id="drawerOverlay">
+    <div class="drawer-scrim" onclick="closeDrawer()"></div>
+    <div class="drawer">
+      <div class="drawer__header">
+        <div class="drawer__header-main">
+          <h2 class="drawer__title">Page title goes here</h2>
+          <div class="drawer__actions">
+            <button class="button button--secondary button--small" onclick="closeDrawer()">
+              Cancel
+            </button>
+            <button class="button button--primary button--small" onclick="closeDrawer()">
+              Save
+            </button>
+          </div>
+        </div>
+        <div class="drawer__description">
+          Optional short and succinct description displayed to provide context to the drawer, with optional hyperlinks
+        </div>
+      </div>
+      <div class="drawer__content">
+        <h3>Drawer Content</h3>
+        <p style="margin: 16px 0;">This is the content area of the drawer. You can put any content here including forms, lists, or any other components.</p>
+        <p style="margin: 16px 0;">The drawer slides in from the right with a semi-transparent overlay behind it. Clicking outside the drawer or pressing the Cancel button will close it.</p>
+        <h4 style="margin-top: 24px;">Features:</h4>
+        <ul style="margin: 16px 0; padding-left: 24px;">
+          <li>Smooth slide-in animation</li>
+          <li>Semi-transparent backdrop</li>
+          <li>Rounded corners on left side</li>
+          <li>Responsive design</li>
+          <li>Accessible with keyboard support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openModal(size) {
+      const modalId = size === 'small' ? 'modalSmall' : 
+                      size === 'default' ? 'modalDefault' :
+                      size === 'large' ? 'modalLarge' :
+                      'modalDestructive';
+      document.getElementById(modalId).classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(size) {
+      const modalId = size === 'small' ? 'modalSmall' : 
+                      size === 'default' ? 'modalDefault' :
+                      size === 'large' ? 'modalLarge' :
+                      'modalDestructive';
+      document.getElementById(modalId).classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function openDrawer() {
+      document.getElementById('drawerOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeDrawer() {
+      document.getElementById('drawerOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // Add click handlers for interactive demo
+    document.querySelectorAll('.button').forEach(button => {
+      button.addEventListener('click', (e) => {
+        if (e.target.onclick) return; // Skip if has onclick
+        const ripple = document.createElement('span');
+        ripple.style.cssText = `
+          position: absolute;
+          background: rgba(255,255,255,0.5);
+          border-radius: 50%;
+          width: 10px;
+          height: 10px;
+          animation: ripple 0.6s ease-out;
+        `;
+        e.target.style.position = 'relative';
+        e.target.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 600);
+      });
+    });
+
+    // ESC key to close modals and drawer
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeDrawer();
+        closeModal('small');
+        closeModal('default');
+        closeModal('large');
+        closeModal('destructive');
+      }
+    });
+
+    // Close modals when clicking overlay
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+          overlay.classList.remove('open');
+          document.body.style.overflow = '';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,1575 @@
+{
+  "schemaVersion": 1,
+  "lastModified": "2025-08-01T13:42:37.111Z",
+  "collections": [
+    {
+      "id": "VariableCollectionId:2621:40080",
+      "name": "colour-usage",
+      "key": "121af3d7c05d7967ead39af293d6e2c987613592",
+      "hiddenFromPublishing": false,
+      "defaultModeId": "2621:0",
+      "modes": [
+        {
+          "name": "Zappi",
+          "modeId": "2621:0"
+        },
+        {
+          "name": "Burguer King",
+          "modeId": "2644:0"
+        },
+        {
+          "name": "Heineken",
+          "modeId": "2975:0"
+        },
+        {
+          "name": "Pernod",
+          "modeId": "2975:1"
+        }
+      ],
+      "remote": false,
+      "variableIds": [
+        "VariableID:2621:40120",
+        "VariableID:2621:40121",
+        "VariableID:8906:1671",
+        "VariableID:2630:40180",
+        "VariableID:8906:22412",
+        "VariableID:2621:40112",
+        "VariableID:2621:40113",
+        "VariableID:2621:40132",
+        "VariableID:2621:40150",
+        "VariableID:2621:40152",
+        "VariableID:2621:40153",
+        "VariableID:2621:40151",
+        "VariableID:2621:40154",
+        "VariableID:2621:40155",
+        "VariableID:2768:40860",
+        "VariableID:2768:40859",
+        "VariableID:2768:40861",
+        "VariableID:2621:40138",
+        "VariableID:2621:40162",
+        "VariableID:2621:40133",
+        "VariableID:2621:40163",
+        "VariableID:2621:40164",
+        "VariableID:2621:40134",
+        "VariableID:2621:40167",
+        "VariableID:2621:40168",
+        "VariableID:2621:40135",
+        "VariableID:2621:40169",
+        "VariableID:2621:40170",
+        "VariableID:2944:44559",
+        "VariableID:2944:44560",
+        "VariableID:2944:44561",
+        "VariableID:2944:44562",
+        "VariableID:2930:42610",
+        "VariableID:2930:42615",
+        "VariableID:2930:42611",
+        "VariableID:2930:42617",
+        "VariableID:2940:40679",
+        "VariableID:3091:41685",
+        "VariableID:2940:40680",
+        "VariableID:3275:40851",
+        "VariableID:2930:42613",
+        "VariableID:2930:42651",
+        "VariableID:2975:41391",
+        "VariableID:2975:41392",
+        "VariableID:2981:42445",
+        "VariableID:2981:42446"
+      ],
+      "variables": [
+        {
+          "id": "VariableID:2621:40120",
+          "name": "Background/white (default)",
+          "description": "Brighter background colour used on both primary containers as well as cards (White 1000)",
+          "key": "e336857e32e07cdf4d0de28cb12f2cdecde0cd29",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:15be0eec1f5afd1c7af242a376fce08747fabc2d/414:2246"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:15be0eec1f5afd1c7af242a376fce08747fabc2d/414:2246"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:15be0eec1f5afd1c7af242a376fce08747fabc2d/414:2246"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:15be0eec1f5afd1c7af242a376fce08747fabc2d/414:2246"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2621:40121",
+          "name": "Background/light",
+          "description": "General background colour when, typically used when cards are being used (Mine shaft 50)",
+          "key": "892aa9d0e0431b4c2c57d41ba9dea6230279bdb9",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:1fa2a02162c5c1bc47a9100d84d8a0828872fe11/414:2315"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:1fa2a02162c5c1bc47a9100d84d8a0828872fe11/414:2315"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:1fa2a02162c5c1bc47a9100d84d8a0828872fe11/414:2315"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:1fa2a02162c5c1bc47a9100d84d8a0828872fe11/414:2315"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:8906:1671",
+          "name": "Background/dark",
+          "description": "General background colour when, typically used when cards are being used (Mine shaft 50)",
+          "key": "a90e58e8db8212136baa31bfb946f78107e96dec",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f9d53e6ca4073ef9af166a80e7a9b8daaffc2033/414:2307"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f9d53e6ca4073ef9af166a80e7a9b8daaffc2033/414:2307"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:1fa2a02162c5c1bc47a9100d84d8a0828872fe11/414:2315"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:1fa2a02162c5c1bc47a9100d84d8a0828872fe11/414:2315"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2630:40180",
+          "name": "Background/inverse",
+          "description": "Dark neutral background for containers for such usage like tooltips (Mine shaft 950)",
+          "key": "116f43d03e313e6f0c417d90deda5a618d649535",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f28aa7f13508189f9a830bcd4c4982def5c688b2/414:2268"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f28aa7f13508189f9a830bcd4c4982def5c688b2/414:2268"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f28aa7f13508189f9a830bcd4c4982def5c688b2/414:2268"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f28aa7f13508189f9a830bcd4c4982def5c688b2/414:2268"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:8906:22412",
+          "name": "Outline/separator",
+          "description": "Outline colour, typically used for lines between elements (Mine shaft 200)",
+          "key": "c2cbcc3f8b51cda42eef3f9a9dcfb29ac219a3cd",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f9d53e6ca4073ef9af166a80e7a9b8daaffc2033/414:2307"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f9d53e6ca4073ef9af166a80e7a9b8daaffc2033/414:2307"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f9d53e6ca4073ef9af166a80e7a9b8daaffc2033/414:2307"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f9d53e6ca4073ef9af166a80e7a9b8daaffc2033/414:2307"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2621:40112",
+          "name": "Outline/light",
+          "description": "Outline colour, used for lighter backgrounds (Mine shaft 300)",
+          "key": "d28869057b93b7eb833091591ea14fa20f83a3d9",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:35647a20994a36717935f73fafaa44e75a3471ac/414:2335"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:35647a20994a36717935f73fafaa44e75a3471ac/414:2335"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:35647a20994a36717935f73fafaa44e75a3471ac/414:2335"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:35647a20994a36717935f73fafaa44e75a3471ac/414:2335"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2621:40113",
+          "name": "Outline/dark",
+          "description": "Outline colour, used for default background colour (Mine shaft 400)",
+          "key": "46f2dbe5b5c2f00f7a5d99909b8c01635a340be8",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:72fbaf88c41c01aac475a0b427d0912f21b8ab7b/414:2329"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:72fbaf88c41c01aac475a0b427d0912f21b8ab7b/414:2329"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:72fbaf88c41c01aac475a0b427d0912f21b8ab7b/414:2329"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:72fbaf88c41c01aac475a0b427d0912f21b8ab7b/414:2329"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2621:40132",
+          "name": "Semantic/Info/normal",
+          "description": "This colour represents information (Viking 400)",
+          "key": "3e36058774f2dc35ba7ea3d5b9078a7ec3e0712f",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:acc282ba7a96f1877b033eae6b3e8eab597dcf31/414:2292"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:acc282ba7a96f1877b033eae6b3e8eab597dcf31/414:2292"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:acc282ba7a96f1877b033eae6b3e8eab597dcf31/414:2292"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:acc282ba7a96f1877b033eae6b3e8eab597dcf31/414:2292"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2621:40150",
+          "name": "Brand/Primary/normal",
+          "description": "The primary colour, representing core personality of the brand. (Guava 500)",
+          "key": "f86d2fd6d00cd4781b9dffa185d0ffe78102cfa8",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:dff7b1507f144303779ac2294388ffce27aa79f6/414:2346"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:347949f1f0b2cd3d798170b843df0c73f1ac80db/697:0"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:0d0c80cbad4f1491c1f8a0639bf5477defc7a2b4/494:125"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:18fb6e75c93af6d8e02d551a821c937914a11cdc/440:88"
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2621:40152",
+          "name": "Brand/Primary/light",
+          "description": "Best used for container backgrounds and selection highlighting (Guava 50)",
+          "key": "ef7b1945729c87afc5914b3e4b7466bbd356c69f",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "r": 1,
+              "g": 0.91,
+              "b": 0.93,
+              "a": 1
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:4a5342daa77653a088c6e191e95640fa5e7265c8/697:1"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:4fc377fc41575c9af6585d1ccee7afbb6d07a1c8/494:126"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:b88a24f8ffc5c656295d01776b6f8b71509208b3/440:89"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR",
+            "EFFECT_COLOR"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2621:40153",
+          "name": "Brand/Primary/dark",
+          "description": "Best used for text on coloured backgrounds and surface hover states",
+          "key": "e58875d471ae3f5d50415f2340591b9ae3913db8",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "r": 0.6,
+              "g": 0,
+              "b": 0.16,
+              "a": 1
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:1de7fbb0cd1a9059d4d2eba2bfbd9373e7f41cae/697:2"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:47ee6e2b94babbc9ba26cc26d5e0184aaa3b54e4/494:127"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:cb00b2b17a88f1dfc95a16224bcb82dd4750c4d9/440:90"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR",
+            "EFFECT_COLOR"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2621:40151",
+          "name": "Brand/Secondary/normal",
+          "description": "Core and complimentary brand colour. Provides more ways to accent and distinguish UI. Best for buttons, links, switches, headlines, etc…",
+          "key": "fe6930944f22bd89e431210dc46a20dd2d397762",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:dff7b1507f144303779ac2294388ffce27aa79f6/414:2346"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:257bf845a8461e428e427fa03d1de98bf3570c56/695:4"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:12e1dbf970e63ea3fc47bd9bd2763ad83f574770/700:4"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:bca9c50421ee10f7cf6503dc835ba97ad3a98606/440:94"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR",
+            "EFFECT_COLOR"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2621:40154",
+          "name": "Brand/Secondary/light",
+          "description": "For accents - Used for selection states and on hover / overlays of list items",
+          "key": "271f1bfa6c82951fef3bac3d0c7b1c56f8580a61",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "r": 1,
+              "g": 0.3,
+              "b": 0.49,
+              "a": 0.1
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:747bd1f6432783ef5005887a4e75f1aa65bfd065/695:5"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:d2a818af1f965d1103ee15c5bc879da877ce90f4/700:6"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:9bd99789378477656bcd301fe7cb74efab3c43bc/440:95"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR",
+            "EFFECT_COLOR"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2621:40155",
+          "name": "Brand/Secondary/dark",
+          "description": "For accents - used for text on coloured backgrounds and surface hover states",
+          "key": "aedd6b642cea3319b73f5b3bf36b7c79b4509f0f",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "r": 0.6,
+              "g": 0,
+              "b": 0.16,
+              "a": 1
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:527762f179f99ec26f1903d90d3b672039097e74/695:6"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:deaa5efa6adc35126a72ea33077e50d29c18182e/700:5"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:61c567b4a4cb33753efc43d1f2405b49aa97634f/440:96"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR",
+            "EFFECT_COLOR"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2768:40860",
+          "name": "Brand/Tertiary/normal",
+          "description": "",
+          "key": "40e781a266eb89578e50c28300fa43e9ea6e4922",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f0e3dab773c519bf6eb3aa1a5e8be02426f59e07/414:2333"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:311a539a458a634f2b11ea6f519bd0478d714382/697:3"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5aae5226d6c2064710d85d8d7597423b03f8ad62/700:8"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:d1b9ddfb85863d24769a8bf38777b7b878516bf3/440:100"
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2768:40859",
+          "name": "Brand/Tertiary/light",
+          "description": "Best used for container backgrounds and selection highlighting (Blueberry 50)",
+          "key": "30d2688eab4d0b166edddb45c8a3c55920a13218",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:716df3301612c0e780142fc9801f45ec7da56a6a/414:2348"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:0fbbfa763b80b987fa1200a89fcfbdc9d838f333/695:8"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:71dec3f1650cf5194c014dad1f4268c5e44d69f0/700:9"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:65451f87f9f41844d6ef18d7474c72b6079f58f5/440:101"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR",
+            "EFFECT_COLOR"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2768:40861",
+          "name": "Brand/Tertiary/dark",
+          "description": "Best used for text on coloured backgrounds and surface hover states (Guava 900)",
+          "key": "43a73dc82e3a49095643b69ea8625284c0a8dc16",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:b69d39a109b70506ecee0210d7f2e3890cfc4f38/414:2327"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:abcd822a529bea7778545165cb3060ce76c865f2/695:9"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:77d5fc8ce1b45458465d655820d5a70eb6fbdebb/700:10"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:0277b0f351a394961ba7cfdeb18ad9389f7b549b/440:102"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR",
+            "EFFECT_COLOR"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2621:40138",
+          "name": "Semantic/Info/light",
+          "description": "Best used for container backgrounds (Viking 50)",
+          "key": "aee463d3d946d0640055435375467d9d7ad42e36",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:8c5cf4976e6029175b7c5a3da5138227446b3363/414:2294"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:8c5cf4976e6029175b7c5a3da5138227446b3363/414:2294"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:8c5cf4976e6029175b7c5a3da5138227446b3363/414:2294"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:8c5cf4976e6029175b7c5a3da5138227446b3363/414:2294"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {
+            "WEB": "Semantic/Info/info_light"
+          },
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2621:40162",
+          "name": "Semantic/Info/dark",
+          "description": "Best used for text respective tinted background (Viking 600)",
+          "key": "ada368db304fd90e20f2d46dfc21139ed67f3325",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:70519b8cd9160ab3e62f3676c31cf95427eddb2d/414:2290"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:70519b8cd9160ab3e62f3676c31cf95427eddb2d/414:2290"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:70519b8cd9160ab3e62f3676c31cf95427eddb2d/414:2290"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:70519b8cd9160ab3e62f3676c31cf95427eddb2d/414:2290"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2621:40133",
+          "name": "Semantic/Success/normal",
+          "description": "This colour represents success (positive, Fern 400)",
+          "key": "b964fe0f816e74bea8a209e8cc9e967d160f2616",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:0119f47fd8d75152e0b550228e3edb037a6666fd/414:2281"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:0119f47fd8d75152e0b550228e3edb037a6666fd/414:2281"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:0119f47fd8d75152e0b550228e3edb037a6666fd/414:2281"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:0119f47fd8d75152e0b550228e3edb037a6666fd/414:2281"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2621:40163",
+          "name": "Semantic/Success/light",
+          "description": "Best used for container backgrounds (Fern 50)",
+          "key": "54a1b9503fb40a2f6c33ce9221a38eee4a4de98a",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:0149da98767e79cddb460be7278558328f22f2ef/414:2285"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:0149da98767e79cddb460be7278558328f22f2ef/414:2285"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:0149da98767e79cddb460be7278558328f22f2ef/414:2285"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:0149da98767e79cddb460be7278558328f22f2ef/414:2285"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2621:40164",
+          "name": "Semantic/Success/dark",
+          "description": "Best used for text respective tinted background (Fern 600)",
+          "key": "921735599fac45ee3bc155989fae5089e5fc3ff2",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:284e6109bdd39f730d4b71906ebe4fbee4c78c08/414:2279"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:284e6109bdd39f730d4b71906ebe4fbee4c78c08/414:2279"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:284e6109bdd39f730d4b71906ebe4fbee4c78c08/414:2279"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:284e6109bdd39f730d4b71906ebe4fbee4c78c08/414:2279"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2621:40134",
+          "name": "Semantic/Warning/normal",
+          "description": "This colour represents warnings (Sandy 400)",
+          "key": "f2db1455a6284ccc54f70f9f188189cb717e0b80",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:575c4497936e3beaeca238ebadd9e6b5b28bd72a/414:2347"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:575c4497936e3beaeca238ebadd9e6b5b28bd72a/414:2347"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:575c4497936e3beaeca238ebadd9e6b5b28bd72a/414:2347"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:575c4497936e3beaeca238ebadd9e6b5b28bd72a/414:2347"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2621:40167",
+          "name": "Semantic/Warning/light",
+          "description": "Best used for container backgrounds (Sandy 50)",
+          "key": "bb5a320baedb181f9ff51ff85c1752290aada3c2",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:53823eb9fa24cc94626e275e1a81f4819af83f87/414:2365"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:53823eb9fa24cc94626e275e1a81f4819af83f87/414:2365"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:53823eb9fa24cc94626e275e1a81f4819af83f87/414:2365"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:53823eb9fa24cc94626e275e1a81f4819af83f87/414:2365"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2621:40168",
+          "name": "Semantic/Warning/dark",
+          "description": "Best used for text respective tinted background (Sandy 600)",
+          "key": "6ee051cbe82c861d81cf5ab55fd768283a9116bc",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:1912f555bf5f751410e49ba760056aec21f9f815/414:2353"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:1912f555bf5f751410e49ba760056aec21f9f815/414:2353"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:1912f555bf5f751410e49ba760056aec21f9f815/414:2353"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:1912f555bf5f751410e49ba760056aec21f9f815/414:2353"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2621:40135",
+          "name": "Semantic/Error/normal",
+          "description": "This colour represents error, negative outcome (Valencia 500)",
+          "key": "4d0a39f992fdeca915b9d65974ff117bbfa58a96",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:e2ee4a3ed4db14ed5b23e291ea5396c6ecb5681d/414:2328"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:e2ee4a3ed4db14ed5b23e291ea5396c6ecb5681d/414:2328"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:e2ee4a3ed4db14ed5b23e291ea5396c6ecb5681d/414:2328"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:e2ee4a3ed4db14ed5b23e291ea5396c6ecb5681d/414:2328"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2621:40169",
+          "name": "Semantic/Error/light",
+          "description": "Best used for container backgrounds (Valencia 50)",
+          "key": "7e0a4e75df125fd9847b25d552551c89bf04c2ca",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:28f4c95a978f15b08f455b72ca57dbe7935c7caf/414:2342"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:28f4c95a978f15b08f455b72ca57dbe7935c7caf/414:2342"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:28f4c95a978f15b08f455b72ca57dbe7935c7caf/414:2342"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:28f4c95a978f15b08f455b72ca57dbe7935c7caf/414:2342"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2621:40170",
+          "name": "Semantic/Error/dark",
+          "description": "Best used for text respective tinted background (Valencia 700)",
+          "key": "bb9c3dddd9f2b716b706f492ecebe38878e395b0",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:30e36141583ab52e4b15d078bd7c928b09584206/414:2270"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:30e36141583ab52e4b15d078bd7c928b09584206/414:2270"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:30e36141583ab52e4b15d078bd7c928b09584206/414:2270"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:30e36141583ab52e4b15d078bd7c928b09584206/414:2270"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2944:44559",
+          "name": "Pilars/advertising",
+          "description": "This colour represents information (Viking 400)",
+          "key": "16f8417081f1071a15fec9ef504f9620c90c2302",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:dff7b1507f144303779ac2294388ffce27aa79f6/414:2346"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:dff7b1507f144303779ac2294388ffce27aa79f6/414:2346"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:dff7b1507f144303779ac2294388ffce27aa79f6/414:2346"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:dff7b1507f144303779ac2294388ffce27aa79f6/414:2346"
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2944:44560",
+          "name": "Pilars/innovation",
+          "description": "",
+          "key": "555f7b436b5f8318db8649d362cfd7a2f5c22dd6",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f0e3dab773c519bf6eb3aa1a5e8be02426f59e07/414:2333"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f0e3dab773c519bf6eb3aa1a5e8be02426f59e07/414:2333"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f0e3dab773c519bf6eb3aa1a5e8be02426f59e07/414:2333"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f0e3dab773c519bf6eb3aa1a5e8be02426f59e07/414:2333"
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2944:44561",
+          "name": "Pilars/brand&category",
+          "description": "",
+          "key": "5e65b8230214617a4fab350cd59f76abfb2473cb",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:336fb5a056cf75f8f820ab297281c73a1cf333fa/414:2257"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:336fb5a056cf75f8f820ab297281c73a1cf333fa/414:2257"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:336fb5a056cf75f8f820ab297281c73a1cf333fa/414:2257"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:336fb5a056cf75f8f820ab297281c73a1cf333fa/414:2257"
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2944:44562",
+          "name": "Pilars/shopper",
+          "description": "",
+          "key": "59dc0ff42125f669d061f96eca7dee4faa80cfa7",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:2f7578e358d191627d4073f055e6c99e4eb49388/414:2313"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:2f7578e358d191627d4073f055e6c99e4eb49388/414:2313"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:2f7578e358d191627d4073f055e6c99e4eb49388/414:2313"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:2f7578e358d191627d4073f055e6c99e4eb49388/414:2313"
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2930:42610",
+          "name": "On Hover/default/on_light",
+          "description": "For overlays on hover",
+          "key": "6d00e834c8f368616ecf36241e70d3f02b52374c",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f91dcd7b5808b1e2ae20cfc9a6af0142bcb753e2/414:2267"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f91dcd7b5808b1e2ae20cfc9a6af0142bcb753e2/414:2267"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f91dcd7b5808b1e2ae20cfc9a6af0142bcb753e2/414:2267"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f91dcd7b5808b1e2ae20cfc9a6af0142bcb753e2/414:2267"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR",
+            "EFFECT_COLOR"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2930:42615",
+          "name": "On Hover/default/on_dark",
+          "description": "For overlays on hover",
+          "key": "74bc5ee490805e0be3d84e34b79fbbdc205b0ddf",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:63f9a9a0ac8f6980834f7a8ed28db398d1dbbce4/414:2266"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:63f9a9a0ac8f6980834f7a8ed28db398d1dbbce4/414:2266"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:63f9a9a0ac8f6980834f7a8ed28db398d1dbbce4/414:2266"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:63f9a9a0ac8f6980834f7a8ed28db398d1dbbce4/414:2266"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR",
+            "EFFECT_COLOR"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2930:42611",
+          "name": "On Hover/inverse/on_light",
+          "description": "For overlays on hover",
+          "key": "8c91db6426cb8e81ef143d2d69444d82969d308d",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:86a49a8f061797eaaadba2e02034c2d2449699f1/414:2254"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:86a49a8f061797eaaadba2e02034c2d2449699f1/414:2254"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:86a49a8f061797eaaadba2e02034c2d2449699f1/414:2254"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:86a49a8f061797eaaadba2e02034c2d2449699f1/414:2254"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR",
+            "EFFECT_COLOR"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2930:42617",
+          "name": "On Hover/inverse/on_dark",
+          "description": "For overlays on hover",
+          "key": "23c2855015ed553911082b8c068b9b75a4c848d1",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:74bfd83cab26e14599ec7a307de5f33cba2a4076/414:2253"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:74bfd83cab26e14599ec7a307de5f33cba2a4076/414:2253"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:74bfd83cab26e14599ec7a307de5f33cba2a4076/414:2253"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:74bfd83cab26e14599ec7a307de5f33cba2a4076/414:2253"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR",
+            "EFFECT_COLOR"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2940:40679",
+          "name": "Overlay/branded_light",
+          "description": "",
+          "key": "57ea61842f954f57494c09415a0361ff97723450",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "r": 0,
+              "g": 0.24,
+              "b": 0.86,
+              "a": 0.6
+            },
+            "2644:0": {
+              "r": 0.94,
+              "g": 0.53,
+              "b": 0,
+              "a": 0.6
+            },
+            "2975:0": {
+              "r": 0.05,
+              "g": 0.66,
+              "b": 0.87,
+              "a": 0.6
+            },
+            "2975:1": {
+              "r": 0.94,
+              "g": 0.26,
+              "b": 0.29,
+              "a": 0.6
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:3091:41685",
+          "name": "Overlay/branded_dark",
+          "description": "",
+          "key": "9c2f83a24dbcc48e360b76b821c4f04f4dc1d433",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "r": 0,
+              "g": 0.24,
+              "b": 0.86,
+              "a": 0.9
+            },
+            "2644:0": {
+              "r": 0.94,
+              "g": 0.53,
+              "b": 0,
+              "a": 0.9
+            },
+            "2975:0": {
+              "r": 0.05,
+              "g": 0.66,
+              "b": 0.87,
+              "a": 0.9
+            },
+            "2975:1": {
+              "r": 0.94,
+              "g": 0.26,
+              "b": 0.29,
+              "a": 0.9
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2940:40680",
+          "name": "Overlay/default_light",
+          "description": "",
+          "key": "9661ddf3c4cfe2a92cdaf1ce11d33fc4d66971c8",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:4fcb68371ff2767ced11f5c5919ec0979e7caffc/414:2262"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:4fcb68371ff2767ced11f5c5919ec0979e7caffc/414:2262"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:4fcb68371ff2767ced11f5c5919ec0979e7caffc/414:2262"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:4fcb68371ff2767ced11f5c5919ec0979e7caffc/414:2262"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:3275:40851",
+          "name": "Overlay/default_dark",
+          "description": "",
+          "key": "197e622a79078614ea6f1c1b5e84aa72e9855c02",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:a9a69c50ff1bbc21a2fafd9cb509081bce4d207a/414:2258"
+            },
+            "2644:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:a9a69c50ff1bbc21a2fafd9cb509081bce4d207a/414:2258"
+            },
+            "2975:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:a9a69c50ff1bbc21a2fafd9cb509081bce4d207a/414:2258"
+            },
+            "2975:1": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:a9a69c50ff1bbc21a2fafd9cb509081bce4d207a/414:2258"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2930:42613",
+          "name": "Other/transparent",
+          "description": "",
+          "key": "60316629c5bce6f79f88b55e444ef373ba93d28c",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 0
+            },
+            "2644:0": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 0
+            },
+            "2975:0": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 0
+            },
+            "2975:1": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 0
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2930:42651",
+          "name": "Other/branded",
+          "description": "",
+          "key": "19b459786cc1a3d967f1610bd46eeec000da83dc",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "2621:0": {
+              "r": 1,
+              "g": 0.3,
+              "b": 0.49,
+              "a": 0.5
+            },
+            "2644:0": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "2975:0": {
+              "r": 0,
+              "g": 0.46,
+              "b": 0.85,
+              "a": 0.5
+            },
+            "2975:1": {
+              "r": 0.23,
+              "g": 0.35,
+              "b": 0.58,
+              "a": 0.5
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2975:41391",
+          "name": "Mode/zappi",
+          "description": "",
+          "key": "c5aac13f51da73b40bce850ffea37c83ef289e23",
+          "resolvedType": "BOOLEAN",
+          "valuesByMode": {
+            "2621:0": true,
+            "2644:0": false,
+            "2975:0": false,
+            "2975:1": false
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2975:41392",
+          "name": "Mode/burguer-king",
+          "description": "",
+          "key": "2ae70730c3879e3c9d09af966884ec771b4ac203",
+          "resolvedType": "BOOLEAN",
+          "valuesByMode": {
+            "2621:0": false,
+            "2644:0": true,
+            "2975:0": false,
+            "2975:1": false
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2981:42445",
+          "name": "Mode/heineken",
+          "description": "",
+          "key": "f96a121a9e4907706feb06335f0c64023bc84eaa",
+          "resolvedType": "BOOLEAN",
+          "valuesByMode": {
+            "2621:0": false,
+            "2644:0": false,
+            "2975:0": true,
+            "2975:1": false
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        },
+        {
+          "id": "VariableID:2981:42446",
+          "name": "Mode/pernod",
+          "description": "",
+          "key": "79d63458349ba171698192362b26fd0dc07da49a",
+          "resolvedType": "BOOLEAN",
+          "valuesByMode": {
+            "2621:0": false,
+            "2644:0": false,
+            "2975:0": false,
+            "2975:1": true
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {},
+          "variableCollectionId": "VariableCollectionId:2621:40080"
+        }
+      ]
+    }
+  ],
+  "fileName": "[ Zappi DS ] Core components V2.1-variables-full.json"
+}

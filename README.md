@@ -1,46 +1,194 @@
-# Getting Started with Create React App
+# Zappi Design System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A comprehensive React component library with design tokens, themes, and pre-built UI components.
+
+## Overview
+
+This is a **pure component library** designed to be used in React projects. It provides reusable UI components and a complete design token system.
+
+## Quick Links
+
+- **[Library Documentation](./LIBRARY_README.md)** - How to use this as a library in your projects
+- **[Usage Guide](./USAGE_GUIDE.md)** - Detailed setup instructions for developers
+- **[Typography Reference](./TYPOGRAPHY_REFERENCE.md)** - Complete typography system from Figma
+
+## Installation
+
+Install the library in your React project:
+
+```bash
+npm install zappi-design-system
+```
+
+## Usage
+
+```tsx
+import 'zappi-design-system/styles';
+import { Button, Chip, Drawer, Modal, Tag, Toggle } from 'zappi-design-system';
+
+function App() {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
+  return (
+    <div>
+      <Button variant="primary" onClick={() => setIsModalOpen(true)}>
+        Open Modal
+      </Button>
+      <Button variant="secondary" onClick={() => setIsDrawerOpen(true)}>
+        Open Drawer
+      </Button>
+      <Chip label="Active" variant="primary" />
+      <Tag label="New" variant="success" />
+      
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="My Modal"
+        secondaryText="Optional secondary text"
+        size="default"
+        onPrimary={() => console.log('Confirmed!')}
+      >
+        <p>Modal content goes here</p>
+      </Modal>
+      
+      <Drawer
+        isOpen={isDrawerOpen}
+        onClose={() => setIsDrawerOpen(false)}
+        title="My Drawer"
+        description="Optional description text"
+        onSave={() => console.log('Saved!')}
+      >
+        <p>Drawer content goes here</p>
+      </Drawer>
+    </div>
+  );
+}
+```
+
+**See [LIBRARY_README.md](./LIBRARY_README.md) for complete documentation.**
 
 ## Available Scripts
 
-In the project directory, you can run:
+### Building
 
-### `npm start`
+```bash
+# Build the library for distribution
+npm run build
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This creates the `dist/` folder with:
+- `index.js` - CommonJS bundle
+- `index.esm.js` - ES Module bundle
+- `index.css` - Compiled styles
+- `types/` - TypeScript definitions
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Components
 
-### `npm test`
+The design system includes:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Button** - Primary, secondary, and ghost variants with 3 sizes
+- **Chip** - Compact labels with optional close functionality
+- **Drawer** - Right-side modal drawer with overlay and animations
+- **Modal** - Centered modal dialog in small, default, and large sizes
+- **Tag** - Status and category labels with multiple variants
+- **Toggle** - Switch component for binary states
 
-### `npm run build`
+## Design Tokens
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Pre-defined CSS custom properties for:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Colors** - Brand, background, text, outline
+- **Typography** - 7 categories with 18 text styles (Display, Headline, Title, Body, Label, Caption, Overline)
+- **Spacing** - 4px to 48px scale
+- **Border radius** - Small, medium, large, full
+- **Shadows** - Small, medium, large
+- **Transitions** - Fast, normal, slow
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+See [TYPOGRAPHY_REFERENCE.md](./TYPOGRAPHY_REFERENCE.md) for the complete typography system.
 
-### `npm run eject`
+## Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+src/
+├── components/          # All UI components
+│   ├── Button/
+│   ├── Chip/
+│   ├── Drawer/
+│   ├── Modal/
+│   ├── Tag/
+│   └── Toggle/
+├── design-tokens/      # CSS variables and tokens
+└── lib.ts             # Library entry point
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Using as a Library
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Local Development (npm link)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+# In this directory
+npm run build
+npm link
+
+# In your project
+npm link zappi-design-system
+```
+
+### Publishing to npm
+
+```bash
+# Update version
+npm version patch  # or minor/major
+
+# Build and publish
+npm run build
+npm publish
+```
+
+**Complete setup instructions:** [USAGE_GUIDE.md](./USAGE_GUIDE.md)
+
+## TypeScript Support
+
+Full TypeScript support with exported types for all components.
+
+```tsx
+import { Button, ButtonProps, Chip, ChipProps } from 'zappi-design-system';
+```
+
+## Browser Support
+
+- Modern browsers (Chrome, Firefox, Safari, Edge)
+- React 18+ or React 19+
+
+## Design System Features
+
+✅ **Type-safe** - Full TypeScript support  
+✅ **Tree-shakeable** - Import only what you need  
+✅ **Themeable** - CSS custom properties for easy customization  
+✅ **Accessible** - Built with accessibility best practices  
+✅ **Consistent** - Design tokens ensure visual consistency  
+✅ **Documented** - Comprehensive docs and examples  
+
+## Contributing
+
+1. Make changes to components in `src/components/`
+2. Update design tokens in `src/design-tokens/tokens.css`
+3. Build the library with `npm run build`
+4. Test in another project using `npm link`
+
+## Version History
+
+- **0.1.0** - Initial release with core components
+
+## License
+
+MIT
+
+---
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [React Documentation](https://reactjs.org/)
+- [Library Usage Guide](./USAGE_GUIDE.md)
+- [Typography Reference](./TYPOGRAPHY_REFERENCE.md)
