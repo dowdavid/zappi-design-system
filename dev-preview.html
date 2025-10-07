@@ -533,13 +533,50 @@
 
     <!-- Chips Section -->
     <div class="section">
-      <h2>Chips</h2>
+      <h2>Chips (Multiselect)</h2>
       
       <div class="component-group">
-        <span class="component-label">Chip Variants</span>
-        <span class="chip chip--primary">Primary Chip</span>
-        <span class="chip chip--secondary">Secondary Chip</span>
-        <span class="chip chip--primary">✓ With Icon</span>
+        <span class="component-label">Default Size</span>
+        <button class="chip">
+          <span class="chip__checkbox"></span>
+          <span>Default</span>
+        </button>
+        <button class="chip chip--selected">
+          <span class="chip__checkbox">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M10 3L4.5 8.5L2 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span>Selected</span>
+        </button>
+        <button class="chip chip--disabled">
+          <span class="chip__checkbox"></span>
+          <span>Disabled</span>
+        </button>
+        <button class="chip chip--disabled-selected">
+          <span class="chip__checkbox">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M10 3L4.5 8.5L2 6" stroke="#f5f5f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span>Disabled Selected</span>
+        </button>
+      </div>
+
+      <div class="component-group">
+        <span class="component-label">Small Size</span>
+        <button class="chip chip--small">
+          <span class="chip__checkbox"></span>
+          <span>Small</span>
+        </button>
+        <button class="chip chip--small chip--selected">
+          <span class="chip__checkbox">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M10 3L4.5 8.5L2 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span>Selected</span>
+        </button>
       </div>
     </div>
 
