@@ -133,21 +133,60 @@
       display: inline-flex;
       align-items: center;
       padding: 6px 12px;
-      border-radius: var(--radius-full);
-      font-size: var(--font-size-label);
-      font-weight: var(--font-weight-regular);
-      gap: 6px;
-      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 400;
+      gap: 12px;
+      background: white;
+      border: 1px solid #d1d1d1;
+      cursor: pointer;
+      color: rgba(0, 0, 0, 0.8);
     }
 
-    .chip--primary {
-      background-color: var(--color-brand-primary-light);
-      color: var(--color-brand-primary);
+    .chip--small {
+      padding: 4px 8px;
+      font-size: 12px;
+      line-height: 18px;
     }
 
-    .chip--secondary {
-      background-color: var(--color-background-light);
-      color: var(--color-text-primary);
+    .chip--selected {
+      border-color: #ff4d7c;
+      color: #ff4d7c;
+    }
+
+    .chip--disabled {
+      cursor: not-allowed;
+      color: rgba(0, 0, 0, 0.3);
+    }
+
+    .chip--disabled-selected {
+      background: #f5f5f5;
+      border-color: #b2b2b2;
+      color: rgba(0, 0, 0, 0.3);
+      cursor: not-allowed;
+    }
+
+    .chip__checkbox {
+      width: 16px;
+      height: 16px;
+      border-radius: 2px;
+      background: #e4e4e4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .chip--selected .chip__checkbox {
+      background: #ff4d7c;
+    }
+
+    .chip--disabled .chip__checkbox {
+      background: #f5f5f5;
+    }
+
+    .chip--disabled-selected .chip__checkbox {
+      background: #e4e4e4;
     }
 
     .tag {
