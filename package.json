@@ -25,6 +25,7 @@
       "require": "./dist/index.js",
       "types": "./dist/types/lib.d.ts"
     },
+    "./dist/index.css": "./dist/index.css",
     "./styles": "./dist/index.css",
     "./tokens": "./src/design-tokens/tokens.css"
   },
